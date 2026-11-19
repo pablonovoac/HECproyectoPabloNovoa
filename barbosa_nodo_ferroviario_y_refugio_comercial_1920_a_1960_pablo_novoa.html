@@ -1,0 +1,2420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbosa, Nodo Ferroviario y Refugio Comercial, 1920 a 1960, Pablo Novoa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ==========================================================================
+       SISTEMA DE DISEÑO EDITORIAL Y ARCHIVO HISTÓRICO
+       ========================================================================== */
+    :root {
+      --bg: #f3f3ec;
+      --bg-alt: #eae9df;
+      --paper: #faf9f4;
+      --ink: #1e1e1c;
+      --ink-soft: #4e4e48;
+      --muted: #75746c;
+      --line: #c9c7ba;
+      --line-dark: #8e8c7f;
+      --accent: #2c5559;
+      --terracotta: #8c3b2b;
+      --ochre: #9a6b26;
+      --mono: 'Courier Prime', 'IBM Plex Mono', monospace;
+      --ui: 'IBM Plex Mono', monospace;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 15px;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* BARRA DE NAVEGACIÓN SUPERIOR */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(243, 243, 236, 0.96);
+      backdrop-filter: blur(4px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.1rem;
+      font-family: var(--ui);
+      font-size: 0.73rem;
+    }
+    nav a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    nav a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* ESTRUCTURA DE SECCIONES */
+    .section {
+      border-bottom: 1px solid var(--line);
+      padding: 3.5rem 1.5rem;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .kicker {
+      font-family: var(--ui);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.65rem;
+    }
+    h1 {
+      font-size: clamp(1.85rem, 4vw, 3.05rem);
+      font-weight: 400;
+      line-height: 1.18;
+      margin: 0 0 1.25rem 0;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-size: clamp(1.4rem, 2.6vw, 1.95rem);
+      font-weight: 400;
+      line-height: 1.25;
+      margin: 0 0 1rem 0;
+    }
+    h3 {
+      font-size: 1.02rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem 0;
+    }
+    p { margin: 0 0 1.1rem 0; color: var(--ink-soft); }
+    strong { color: var(--ink); font-weight: 700; }
+
+    /* ALINEACIÓN HORIZONTAL ESTRICTA DE CRÉDITOS EN LA MISMA LÍNEA BASE */
+    .credits {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 1.25rem;
+      font-family: var(--ui);
+      font-size: 0.76rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      white-space: nowrap;
+      padding: 0.45rem 0;
+      margin-top: 1rem;
+      line-height: 1;
+    }
+
+    /* RETÍCULAS ADAPTABLES */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    .grid-2-even {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.25rem;
+      align-items: start;
+    }
+    .grid-conflict-balanced {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+    .conflict-col-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .conflict-col-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .conflict-map-frame {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid var(--line);
+      background: #ecead9;
+      padding: 0.4rem;
+    }
+    @media (max-width: 860px) {
+      .grid-2, .grid-2-even, .grid-conflict-balanced { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+
+    /* LÁMINAS DE ARCHIVO Y FOTOGRAFÍAS */
+    figure.plate {
+      margin: 0;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 0.7rem;
+      cursor: zoom-in;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+    figure.plate:hover {
+      border-color: var(--accent);
+      background: #ffffff;
+    }
+    figure.plate img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: sepia(8%) contrast(1.03);
+      background: var(--bg-alt);
+    }
+    figure.plate figcaption {
+      font-family: var(--ui);
+      font-size: 0.72rem;
+      line-height: 1.52;
+      color: var(--muted);
+      padding-top: 0.65rem;
+    }
+    .plate-badge {
+      display: inline-block;
+      font-family: var(--ui);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+    .img-fallback {
+      border: 1px dashed var(--line-dark);
+      background: var(--bg-alt);
+      padding: 2rem 1.25rem;
+      text-align: center;
+      font-family: var(--ui);
+      font-size: 0.74rem;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+
+    /* FRANJA DE INDICADORES CLAVE */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+      margin-top: 2.25rem;
+    }
+    @media (max-width: 820px) { .kpi-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .kpi-grid { grid-template-columns: 1fr; } }
+    .kpi-cell {
+      padding: 1.15rem;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+    }
+    .kpi-label {
+      font-family: var(--ui);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      display: block;
+    }
+    .kpi-val {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0.25rem 0;
+      display: block;
+    }
+    .kpi-val.neg { color: var(--terracotta); }
+    .kpi-val.pos { color: var(--accent); }
+    .kpi-note {
+      font-family: var(--ui);
+      font-size: 0.7rem;
+      color: var(--ink-soft);
+      line-height: 1.45;
+    }
+
+    /* NOTA DE ARCHIVO */
+    .archival-note {
+      border-left: 2px solid var(--terracotta);
+      padding: 0.85rem 1.15rem;
+      background: var(--paper);
+      margin: 1.25rem 0;
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+    }
+
+    /* MAPA CARTOGRÁFICO INTERACTIVO */
+    .map-box {
+      border: 1px solid var(--line-dark);
+      background: #ecead9;
+      margin-top: 1.25rem;
+    }
+    .map-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.75rem 1rem;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+    .btn-group { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .btn {
+      font-family: var(--ui);
+      font-size: 0.72rem;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid var(--line-dark);
+      background: var(--bg);
+      color: var(--ink);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn:hover { border-color: var(--accent); color: var(--accent); }
+    .btn.active {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+    }
+    .map-svg-wrap {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    #corridor-map, #conflict-map {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    #corridor-map { max-height: 550px; }
+    .map-node, .svg-click { cursor: pointer; }
+    .map-node:hover .node-ring { stroke-width: 3.2; }
+    .map-caption-bar {
+      padding: 1rem 1.25rem;
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .map-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-family: var(--ui);
+      font-size: 0.7rem;
+      color: var(--ink-soft);
+    }
+    .leg-item { display: inline-flex; align-items: center; gap: 0.4rem; }
+
+    /* PANELES DE GRÁFICAS HISTÓRICAS Y BLOQUES DE ANÁLISIS */
+    .chart-panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 1.15rem;
+      position: relative;
+    }
+    .chart-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 0.55rem;
+    }
+    .chart-title { font-size: 0.92rem; font-weight: 700; margin: 0; }
+    .chart-sub { font-family: var(--ui); font-size: 0.69rem; color: var(--muted); }
+    .chart-area { width: 100%; height: 215px; position: relative; }
+    .chart-readout {
+      margin-top: 0.65rem;
+      padding-top: 0.55rem;
+      border-top: 1px dashed var(--line);
+      font-family: var(--ui);
+      font-size: 0.73rem;
+      color: var(--ink);
+      min-height: 2.3em;
+      line-height: 1.5;
+    }
+
+    /* BLOQUES INTEGRADOS EN SECCIÓN IV */
+    .viz-block {
+      margin-top: 2.75rem;
+      padding-top: 2.25rem;
+      border-top: 1px solid var(--line);
+    }
+    .pill-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.95rem;
+    }
+    .pill-btn {
+      font-family: var(--ui);
+      font-size: 0.7rem;
+      padding: 0.35rem 0.65rem;
+      border: 1px solid var(--line-dark);
+      background: var(--paper);
+      color: var(--ink);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .pill-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .pill-btn.active {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+    }
+    .pill-btn.barbosa-pill {
+      border-color: var(--ochre);
+    }
+    .pill-btn.barbosa-pill.active {
+      background: var(--ochre);
+      color: #ffffff;
+      border-color: var(--ochre);
+    }
+    .mini-bars-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 0.45rem;
+      padding: 0.6rem;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      margin: 0.65rem 0;
+    }
+    .mini-bar-col {
+      flex: 1;
+      text-align: center;
+      font-family: var(--ui);
+      font-size: 0.68rem;
+    }
+    .mini-bar-track {
+      height: 44px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 2px;
+      margin: 0.2rem 0;
+    }
+    .mini-bar-fill {
+      width: 100%;
+      transition: height 0.2s ease;
+    }
+
+    /* BARRAS INTERACTIVAS HTML PARA SUBGRÁFICAS B1 Y BLOQUE D */
+    .bar-row-btn {
+      width: 100%;
+      text-align: left;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      padding: 0.6rem 0.75rem;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      font-family: var(--ui);
+      font-size: 0.72rem;
+      transition: border-color 0.15s, background-color 0.15s;
+    }
+    .bar-row-btn:hover, .bar-row-btn.active {
+      border-color: var(--accent);
+      background: #ffffff;
+    }
+    .bar-row-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+      color: var(--ink);
+    }
+    .bar-track {
+      width: 100%;
+      height: 8px;
+      background: var(--bg-alt);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      transition: width 0.25s ease;
+    }
+
+    /* CUADRÍCULA DE 7 RECUADROS EN SUBGRÁFICA B2 */
+    .impunity-grid-7 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.45rem;
+      margin-top: 0.75rem;
+    }
+    @media (max-width: 540px) {
+      .impunity-grid-7 { grid-template-columns: repeat(2, 1fr); }
+    }
+    .imp-cell {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      padding: 0.55rem 0.4rem;
+      text-align: center;
+      font-family: var(--ui);
+    }
+    .imp-cell.condena-cell {
+      border-color: var(--accent);
+      background: #eef3f2;
+    }
+    .imp-num {
+      display: block;
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--terracotta);
+    }
+    .imp-cell.condena-cell .imp-num {
+      color: var(--accent);
+    }
+    .imp-lbl {
+      display: block;
+      font-size: 0.64rem;
+      color: var(--ink-soft);
+      margin-top: 0.15rem;
+      line-height: 1.3;
+    }
+
+    /* COLUMNAS DE PRENSA PARTIDISTA */
+    .press-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 1.25rem;
+    }
+    .press-card.liberal {
+      border-top: 3px solid var(--terracotta);
+    }
+    .press-card.conservative {
+      border-top: 3px solid var(--accent);
+    }
+    .press-item {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      padding: 0.8rem 0.95rem;
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+    }
+    .press-item h4 {
+      margin: 0 0 0.35rem 0;
+      font-family: var(--ui);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+    }
+    .method-balance {
+      margin-top: 1.5rem;
+      background: var(--paper);
+      border: 1px solid var(--line-dark);
+      border-left: 4px solid var(--ochre);
+      padding: 1.35rem 1.5rem;
+    }
+
+    /* BLOQUE DE LÁMINAS CENSALES */
+    .census-block {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+    }
+
+    /* LÍNEA TEMPORAL VERTICAL */
+    .timeline {
+      position: relative;
+      margin: 2rem 0 0 0.6rem;
+      padding-left: 2rem;
+      border-left: 1.5px solid var(--accent);
+    }
+    .tl-item {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .tl-item:last-child { margin-bottom: 0; }
+    .tl-dot {
+      position: absolute;
+      left: -2.42rem;
+      top: 0.25rem;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 2px solid var(--accent);
+    }
+    .tl-item.major .tl-dot { background: var(--accent); }
+    .tl-meta {
+      font-family: var(--ui);
+      font-size: 0.74rem;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+    .tl-meta span { color: var(--muted); margin-left: 0.45rem; font-weight: 400; }
+    .tl-cite {
+      font-family: var(--ui);
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    /* TABLA DE DATOS Y BIBLIOGRAFÍA */
+    .search-input {
+      font-family: var(--ui);
+      font-size: 0.76rem;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid var(--line-dark);
+      background: var(--paper);
+      color: var(--ink);
+      width: 100%;
+      max-width: 380px;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      margin-top: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--ui);
+      font-size: 0.74rem;
+      text-align: left;
+    }
+    th, td {
+      padding: 0.65rem 0.85rem;
+      border-bottom: 1px solid var(--line);
+    }
+    th { background: var(--bg-alt); font-weight: 600; color: var(--ink); }
+    tr:hover td { background: #f2f1e8; }
+
+    .apa {
+      padding-left: 2rem;
+      text-indent: -2rem;
+      font-size: 0.84rem;
+      margin-bottom: 0.85rem;
+      color: var(--ink-soft);
+    }
+
+    /* MODAL LIGHTBOX */
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      background: rgba(24, 24, 22, 0.9);
+      padding: 1.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+    #lightbox.open { display: flex; }
+    .lb-inner {
+      max-width: 860px;
+      width: 100%;
+      background: var(--paper);
+      border: 1px solid var(--line-dark);
+      padding: 1rem;
+    }
+    .lb-inner img {
+      width: 100%;
+      max-height: 72vh;
+      object-fit: contain;
+      display: block;
+      background: #141413;
+    }
+    .lb-fallback-box {
+      padding: 2.5rem 1.5rem;
+      background: var(--bg-alt);
+      border: 1px dashed var(--line-dark);
+      text-align: center;
+      font-family: var(--ui);
+      font-size: 0.8rem;
+      color: var(--ink);
+    }
+    .lb-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 0.75rem;
+      font-family: var(--ui);
+      font-size: 0.75rem;
+      color: var(--ink-soft);
+    }
+
+    footer {
+      padding: 2rem 1.5rem;
+      font-family: var(--ui);
+      font-size: 0.73rem;
+      color: var(--muted);
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      border-top: 1px solid var(--line);
+      padding-top: 1.5rem;
+    }
+    .footer-author {
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ENCABEZADO STICKY -->
+  <header>
+    <div class="nav-wrap">
+      <a href="#inicio" class="brand">Barbosa, Nodo Ferroviario y Refugio Comercial, 1920 a 1960</a>
+      <nav>
+        <a href="#depresion">I. Gran Depresión</a>
+        <a href="#mapa">II. Corredor Férreo</a>
+        <a href="#barbosa">III. Auge de Barbosa</a>
+        <a href="#violencia">IV. La Violencia</a>
+        <a href="#cronologia">V. Línea temporal</a>
+        <a href="#datos">Fuentes y datos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PORTADA HERO Y LÁMINA 01 -->
+  <section id="inicio" class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="kicker">Investigación Microeconómica e Histórico Regional</span>
+          <h1>De las mulas en Santander al ferrocarril de Barbosa, 1920 a 1960</h1>
+          <p>
+            La transformación económica de Colombia durante la primera mitad del siglo XX, reconstruida desde la trayectoria empresarial de <strong>Luis Ramón Cárdenas Vargas</strong>, nacido en Güepsa, 1894 a 1965, su esposa <strong>Elvira González Bernal</strong>, 1913 a 1946, y la formación médica en Bogotá de sus hijos <strong>Luis</strong>, 1933 a 2023, e <strong>Iván</strong>, 1946.
+          </p>
+          <p>
+            Al cruzar las series macroeconómicas nacionales con los archivos familiares, los censos oficiales de 1938 y 1951 y la prensa provincial, este estudio explica cómo un comerciante autodidacta superó la quiebra industrial de 1929 en Bogotá y convirtió a <strong>Barbosa, Santander</strong>, estación terminal del Ferrocarril del Norte, en un enclave mercantil resiliente frente a la violencia bipartidista.
+          </p>
+          <div class="credits">
+            <span>PABLO NOVOA</span>
+            <span>202321115</span>
+          </div>
+        </div>
+
+        <figure class="plate" onclick="openLightbox('imgs/libreta.jpg', 'Lámina 01, filiación y retrato oficial en la Libreta Militar de Luis Ramón Cárdenas Vargas, nacido en Güepsa, Santander, en junio de 1894, hijo de Ramón Cárdenas y Baldina Vargas, estudios hasta segundo de bachillerato en el Colegio Nacional de Vélez. Archivo familiar.')">
+          <span class="plate-badge">Lámina 01, Archivo Familiar, haz clic para ampliar</span>
+          <img src="imgs/libreta.jpg" alt="Libreta Militar de Luis Ramón Cárdenas Vargas" onerror="handleImgError(this, 'Lámina 01, Libreta Militar y retrato de Luis Ramón Cárdenas Vargas, Güepsa, 1894.')">
+          <figcaption>
+            <strong>Documento 1.</strong> Retrato y filiación de Luis Ramón Cárdenas Vargas, nacido en Güepsa en 1894, hijo de Ramón Cárdenas y Baldina Vargas. Con estudios hasta segundo de bachillerato en el Colegio Nacional de Vélez, levantó su capital desde la arriería hasta el comercio ferroviario.
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- INDICADORES CLAVE -->
+      <div class="kpi-grid">
+        <div class="kpi-cell">
+          <span class="kpi-label">Gran Depresión, 1929 a 1931</span>
+          <span class="kpi-val neg">-3.2%</span>
+          <span class="kpi-note">Contracción del PIB Real, GRECO, 2002. Quiebra de la fábrica de calzado en Bogotá.</span>
+        </div>
+        <div class="kpi-cell">
+          <span class="kpi-label">Red Férrea Santander</span>
+          <span class="kpi-val pos">+108.7%</span>
+          <span class="kpi-note">Expansión de vías entre 1922 y 1934, Muriel, 1983. Barbosa llega a punta de rieles en 1935.</span>
+        </div>
+        <div class="kpi-cell">
+          <span class="kpi-label">Crecimiento Urbano Barbosa</span>
+          <span class="kpi-val pos">+1,483%</span>
+          <span class="kpi-note">Cabecera municipal pasa de 153 hab. en 1938 a 2,422 en 1951, Contraloría, 1940, DANE, 1954.</span>
+        </div>
+        <div class="kpi-cell">
+          <span class="kpi-label">La Violencia en Prensa</span>
+          <span class="kpi-val">1 frente a 27</span>
+          <span class="kpi-note">Eventos registrados en Barbosa frente a Vélez entre 1946 y 1958, Casallas Sierra, 2025.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN I: GRAN DEPRESIÓN Y LÁMINAS 02 Y 03 -->
+  <section id="depresion" class="section">
+    <div class="container">
+      <span class="kicker">I. Acumulación temprana y crisis de 1929</span>
+      <h2>De las máquinas Singer en mula a la liquidación en Bogotá</h2>
+
+      <div class="grid-2">
+        <div>
+          <p>
+            Hijo de colonos liberales de Güepsa que quedaron prematuramente huérfanos de padre, Luis Ramón apenas pudo cursar hasta segundo de bachillerato en el Colegio Nacional de Vélez. A comienzos del siglo XX comenzó a recorrer trochas santandereanas llevando <strong>máquinas de coser Singer a lomo de mula</strong>, oficio con el que reunió su primer capital.
+          </p>
+          <p>
+            En los años veinte, durante la bonanza financiada por la indemnización de Panamá y la expansión cafetera, se asoció con su hermano para montar una <strong>fábrica de zapatos en Bogotá</strong>, importando la maquinaria industrial a través del puerto de Buenaventura.
+          </p>
+          <div class="archival-note">
+            <strong>El golpe macroeconómico de 1929.</strong> El cierre del crédito externo y la contracción del <strong>-3.2% del PIB Real</strong> entre 1929 y 1931, GRECO, 2002, paralizaron la demanda urbana. Sin respaldo bancario, la fábrica quebró y Luis Ramón regresó con su esposa <strong>Elvira González Bernal</strong> a Güepsa, donde vivió en casa de su madre, trabajó como tesorero del pueblo y vio nacer a su hijo Luis en 1933.
+          </div>
+
+          <!-- GRÁFICA 1: PIB REAL GRECO -->
+          <div class="chart-panel" style="margin-top:1.5rem;">
+            <div class="chart-header">
+              <h3 class="chart-title">PIB Real de Colombia, 1927 a 1935</h3>
+              <span class="chart-sub">Índice GRECO, 2002, pasa o haz clic en cada año</span>
+            </div>
+            <div class="chart-area">
+              <svg id="svg-gdp" viewBox="0 0 500 215" width="100%" height="100%"></svg>
+            </div>
+            <div class="chart-readout" id="readout-gdp">
+              1931, punto mínimo de la contracción, -3.2% respecto a 1929, liquidación del taller de calzado en Bogotá.
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:1.5rem;">
+          <figure class="plate" onclick="openLightbox('imgs/mula.jpg', 'Lámina 02, recorridos comerciales vendiendo máquinas de coser Singer a lomo de mula por los municipios de Santander a comienzos del siglo XX. Archivo familiar.')">
+            <span class="plate-badge">Lámina 02, Comercio Rural</span>
+            <img src="imgs/mula.jpg" alt="Vendiendo máquinas Singer en mula" onerror="handleImgError(this, 'Lámina 02, venta de máquinas Singer en mula por Santander, comienzos del siglo XX.')">
+            <figcaption>
+              <strong>Fotografía 2.</strong> Venta de máquinas de coser Singer a lomo de mula por los caminos de Santander. Antes de la llegada del ferrocarril y las carreteras, la arriería articulaba el comercio provincial.
+            </figcaption>
+          </figure>
+
+          <figure class="plate" onclick="openLightbox('imgs/buenaventura.jpg', 'Lámina 03, Luis Ramón Cárdenas en el puerto de Buenaventura frente a los guacales con la maquinaria importada para la fábrica de calzado de Bogotá, década de 1920. Archivo familiar.')">
+            <span class="plate-badge">Lámina 03, Comercio Exterior</span>
+            <img src="imgs/buenaventura.jpg" alt="Maquinaria de calzado en Buenaventura con Luis Ramón" onerror="handleImgError(this, 'Lámina 03, Luis Ramón Cárdenas en el puerto de Buenaventura junto a los guacales de maquinaria.')">
+            <figcaption>
+              <strong>Fotografía 3.</strong> Luis Ramón Cárdenas en el puerto de Buenaventura frente a los guacales de maquinaria importada para su fábrica de calzado en Bogotá, años veinte.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN II: MAPA INTERACTIVO DEL CORREDOR FERROVIARIO PACÍFICO Y ANDES -->
+  <section id="mapa" class="section">
+    <div class="container">
+      <span class="kicker">II. Geografía económica e infraestructura</span>
+      <h2>El corredor ferroviario Pacífico y Andes y la ruta de Luis Ramón</h2>
+      <p>
+        La trayectoria económica de Luis Ramón dependió directamente de la integración intermodal de los ferrocarriles colombianos, Junguito, 1997, Muriel, 1983, primero para traer maquinaria desde <strong>Buenaventura</strong>, luego para abastecer su almacén en <strong>Barbosa</strong> desde Bogotá por el <strong>Ferrocarril del Norte</strong>, y finalmente para mover grandes cargamentos de azúcar desde los ingenios del <strong>Valle del Cauca</strong> hasta los Santanderes. Haz clic en los nodos del mapa o navega por etapas.
+      </p>
+
+      <div class="map-box">
+        <div class="map-toolbar">
+          <div class="btn-group">
+            <button class="btn active" id="btn-view-all" onclick="setMapView('all')">Red completa, Pacífico y Andes</button>
+            <button class="btn" id="btn-view-andes" onclick="setMapView('andes')">Zoom corredor andino</button>
+          </div>
+          <div class="btn-group">
+            <button class="btn" onclick="stepNode(-1)">Etapa anterior</button>
+            <button class="btn" onclick="stepNode(1)">Siguiente etapa</button>
+          </div>
+        </div>
+
+        <div class="map-svg-wrap">
+          <svg id="corridor-map" viewBox="0 0 920 520" xmlns="http://www.w3.org/2000/svg">
+            <!-- Fondo cartográfico papel antiguo -->
+            <rect x="0" y="0" width="920" height="520" fill="#ecead9"/>
+
+            <!-- Relieve cordillerano sutil -->
+            <path d="M 190 490 Q 250 340 310 210 T 460 30" fill="none" stroke="#dcd9c4" stroke-width="46" stroke-linecap="round"/>
+            <path d="M 380 500 Q 450 350 530 220 T 720 20" fill="none" stroke="#e0ddca" stroke-width="64" stroke-linecap="round"/>
+
+            <!-- Etiquetas cordilleranas ubicadas en zonas despejadas sin cruce con ciudades ni departamentos -->
+            <text x="195" y="465" font-size="10" fill="#8f8c7b" transform="rotate(-62 195 465)" letter-spacing="2.5">CORDILLERA CENTRAL</text>
+            <text x="688" y="408" font-size="10" fill="#8f8c7b" transform="rotate(-48 688 408)" letter-spacing="2.5">CORDILLERA ORIENTAL</text>
+
+            <!-- Océano Pacífico -->
+            <path d="M 0 180 L 95 230 L 82 325 L 48 415 L 30 520 L 0 520 Z" fill="#d7e0df" stroke="#9eb1b0" stroke-width="1.2"/>
+            <text x="14" y="375" font-size="10" fill="#526b6c" transform="rotate(-75 14 375)" letter-spacing="2">OCÉANO PACÍFICO</text>
+
+            <!-- Ríos Magdalena y Cauca -->
+            <path d="M 145 505 Q 175 385 205 265 T 275 40" fill="none" stroke="#9ab5b8" stroke-width="2.2"/>
+            <text x="186" y="310" font-size="9" fill="#4f6d70" transform="rotate(-74 186 310)">Río Cauca</text>
+            <path d="M 345 510 Q 375 380 410 250 T 485 15" fill="none" stroke="#9ab5b8" stroke-width="3.2"/>
+            <text x="415" y="230" font-size="9.5" fill="#4f6d70" transform="rotate(-73 415 230)">Río Magdalena</text>
+
+            <!-- Etiquetas Departamentales sin superposición -->
+            <text x="88" y="468" font-size="10" fill="#7c7a6e" font-weight="bold">VALLE DEL CAUCA</text>
+            <text x="295" y="425" font-size="10" fill="#7c7a6e" font-weight="bold">TOLIMA</text>
+            <text x="455" y="382" font-size="10" fill="#7c7a6e" font-weight="bold">CUNDINAMARCA</text>
+            <text x="652" y="232" font-size="10" fill="#7c7a6e" font-weight="bold">BOYACÁ</text>
+            <text x="648" y="46" font-size="10" fill="#7c7a6e" font-weight="bold">SANTANDER</text>
+
+            <!-- TRAMO 1: FERROCARRIL DEL PACÍFICO -->
+            <path d="M 78 360 L 155 395 L 185 335 L 235 305" fill="none" stroke="#1e1e1c" stroke-width="3.5"/>
+            <path d="M 78 360 L 155 395 L 185 335 L 235 305" fill="none" stroke="#f3f3ec" stroke-width="1.4" stroke-dasharray="4,5"/>
+            <text x="108" y="408" font-size="9" fill="#1e1e1c" font-weight="bold">FC. del Pacífico</text>
+
+            <!-- TRAMO 2: CRUCE CORDILLERANO EN CAMIÓN -->
+            <path d="M 235 305 Q 275 292 315 312" fill="none" stroke="#8c3b2b" stroke-width="2.4" stroke-dasharray="5,4"/>
+            <text x="234" y="287" font-size="8.5" fill="#8c3b2b">Paso Quindío, camión</text>
+
+            <!-- TRAMO 3: FERROCARRIL DE GIRARDOT Y LA SABANA -->
+            <path d="M 315 312 L 385 335 L 495 305" fill="none" stroke="#1e1e1c" stroke-width="3.5"/>
+            <path d="M 315 312 L 385 335 L 495 305" fill="none" stroke="#f3f3ec" stroke-width="1.4" stroke-dasharray="4,5"/>
+            <text x="380" y="352" font-size="9" fill="#1e1e1c">FC. Girardot y Sabana</text>
+
+            <!-- TRAMO 4: FERROCARRIL DEL NORTE -->
+            <path d="M 495 305 L 525 262 L 568 205 L 625 148" fill="none" stroke="#2c5559" stroke-width="4.5"/>
+            <path d="M 495 305 L 525 262 L 568 205 L 625 148" fill="none" stroke="#f3f3ec" stroke-width="1.6" stroke-dasharray="5,5"/>
+            <text x="454" y="276" font-size="9" fill="#2c5559" font-weight="bold" transform="rotate(-48 454 276)">FERROCARRIL DEL NORTE, hasta 1935</text>
+
+            <!-- Estaciones intermedias al costado oriental -->
+            <circle cx="525" cy="262" r="3.5" fill="#1e1e1c"/>
+            <text x="536" y="266" font-size="9" fill="#3b3b36">Zipaquirá</text>
+            <circle cx="568" cy="205" r="3.5" fill="#1e1e1c"/>
+            <text x="579" y="209" font-size="9" fill="#3b3b36">Chiquinquirá</text>
+            <circle cx="385" cy="335" r="3" fill="#1e1e1c"/>
+            <text x="372" y="325" font-size="8.5" fill="#3b3b36">Girardot</text>
+            <circle cx="235" cy="305" r="3" fill="#1e1e1c"/>
+            <text x="210" y="320" font-size="8.5" fill="#3b3b36">Armenia</text>
+            <circle cx="315" cy="312" r="3" fill="#1e1e1c"/>
+            <text x="312" y="326" font-size="8.5" fill="#3b3b36">Ibagué</text>
+
+            <!-- TRAMO 5: CAMINOS PROVINCIALES Y DISTRIBUCIÓN DE AZÚCAR -->
+            <path d="M 625 148 L 598 118" fill="none" stroke="#8c3b2b" stroke-width="2" stroke-dasharray="3,3"/>
+            <path d="M 625 148 L 668 122 L 725 82 L 785 45" fill="none" stroke="#9a6b26" stroke-width="2.2" stroke-dasharray="4,3"/>
+            <text x="724" y="96" font-size="8.5" fill="#9a6b26">Ruta azúcar a Socorro, San Gil y Bucaramanga</text>
+
+            <!-- NODOS INTERACTIVOS -->
+            <g class="map-node" id="node-2" onclick="selectNode(2)">
+              <circle class="node-ring" cx="78" cy="360" r="11" fill="#faf9f4" stroke="#1e1e1c" stroke-width="2"/>
+              <text x="78" y="364" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e1e1c">2</text>
+              <text x="68" y="343" font-size="10.5" font-weight="bold" fill="#1e1e1c">Buenaventura</text>
+            </g>
+
+            <g class="map-node" id="node-3" onclick="selectNode(3)">
+              <circle class="node-ring" cx="155" cy="395" r="11" fill="#faf9f4" stroke="#1e1e1c" stroke-width="2"/>
+              <text x="155" y="399" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e1e1c">3</text>
+              <text x="148" y="422" font-size="10.5" font-weight="bold" fill="#1e1e1c">Cali, ingenios</text>
+            </g>
+
+            <g class="map-node" id="node-4" onclick="selectNode(4)">
+              <circle class="node-ring" cx="495" cy="305" r="12" fill="#faf9f4" stroke="#8c3b2b" stroke-width="2.5"/>
+              <text x="495" y="309" text-anchor="middle" font-size="10" font-weight="bold" fill="#8c3b2b">4</text>
+              <text x="512" y="309" font-size="11.5" font-weight="bold" fill="#1e1e1c">Bogotá D.E.</text>
+            </g>
+
+            <g class="map-node" id="node-5" onclick="selectNode(5)">
+              <circle class="node-ring" cx="625" cy="148" r="13" fill="#2c5559" stroke="#1e1e1c" stroke-width="2.5"/>
+              <text x="625" y="152" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">5</text>
+              <text x="644" y="154" font-size="11.5" font-weight="bold" fill="#2c5559">BARBOSA, terminal férrea</text>
+            </g>
+
+            <g class="map-node" id="node-1" onclick="selectNode(1)">
+              <circle class="node-ring" cx="668" cy="122" r="11" fill="#faf9f4" stroke="#2c5559" stroke-width="2"/>
+              <text x="668" y="126" text-anchor="middle" font-size="10" font-weight="bold" fill="#2c5559">1</text>
+              <text x="684" y="125" font-size="10.5" font-weight="bold" fill="#1e1e1c">Güepsa, 1894</text>
+            </g>
+
+            <g class="map-node" id="node-6" onclick="selectNode(6)">
+              <circle class="node-ring" cx="598" cy="118" r="11" fill="#faf9f4" stroke="#8c3b2b" stroke-width="2"/>
+              <text x="598" y="122" text-anchor="middle" font-size="10" font-weight="bold" fill="#8c3b2b">6</text>
+              <text x="512" y="114" font-size="10.5" font-weight="bold" fill="#1e1e1c">Vélez y Cite</text>
+            </g>
+
+            <!-- Rosa de los vientos y escala gráfica -->
+            <g transform="translate(855, 65)">
+              <line x1="0" y1="-24" x2="0" y2="24" stroke="#1e1e1c" stroke-width="1.5"/>
+              <line x1="-24" y1="0" x2="24" y2="0" stroke="#1e1e1c" stroke-width="1.5"/>
+              <polygon points="0,-24 -4,-8 4,-8" fill="#1e1e1c"/>
+              <text x="0" y="-29" text-anchor="middle" font-size="11" font-weight="bold">N</text>
+            </g>
+            <g transform="translate(685, 480)">
+              <rect x="0" y="0" width="90" height="5" fill="#1e1e1c"/>
+              <rect x="90" y="0" width="90" height="5" fill="#faf9f4" stroke="#1e1e1c"/>
+              <text x="0" y="-5" font-size="9.5">0</text>
+              <text x="84" y="-5" font-size="9.5">100</text>
+              <text x="172" y="-5" font-size="9.5">200 km</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="map-caption-bar">
+          <div style="max-width: 620px;">
+            <strong id="node-title" style="font-size:1rem; color:var(--accent);">5, Barbosa, Santander, Estación Terminal del Ferrocarril del Norte, 1935 a 1960.</strong>
+            <p id="node-desc" style="margin:0.35rem 0 0 0; font-size:0.84rem;">
+              Punta de rieles del Ferrocarril del Norte desde 1935 y cruce obligatorio hacia Santander y la costa Atlántica. En 1944 Luis Ramón compra un lote estratégico junto a la plaza, funda la tienda Bogotá y distribuye en exclusiva El Tiempo y azúcar del Valle del Cauca.
+            </p>
+          </div>
+          <div class="map-legend">
+            <span class="leg-item"><svg width="24" height="8"><line x1="0" y1="4" x2="24" y2="4" stroke="#2c5559" stroke-width="3.5"/><line x1="0" y1="4" x2="24" y2="4" stroke="#f3f3ec" stroke-width="1.3" stroke-dasharray="3,3"/></svg> FC. del Norte</span>
+            <span class="leg-item"><svg width="24" height="8"><line x1="0" y1="4" x2="24" y2="4" stroke="#1e1e1c" stroke-width="3"/><line x1="0" y1="4" x2="24" y2="4" stroke="#f3f3ec" stroke-width="1.2" stroke-dasharray="3,3"/></svg> FC. Pacífico y Girardot</span>
+            <span class="leg-item"><svg width="24" height="8"><line x1="0" y1="4" x2="24" y2="4" stroke="#8c3b2b" stroke-width="2" stroke-dasharray="4,3"/></svg> Carretera y camión</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN III: FERROCARRIL Y AUGE DE BARBOSA Y LÁMINAS CENSALES 05 Y 06 -->
+  <section id="barbosa" class="section">
+    <div class="container">
+      <span class="kicker">III. Puerto seco, acumulación mercantil y censos oficiales</span>
+      <h2>Barbosa, la estación terminal que transformó la provincia</h2>
+
+      <figure class="plate" style="margin-bottom:2rem;" onclick="openLightbox('imgs/barbosa.jpg', 'Lámina 04, composición fotográfica panorámica de Barbosa, Santander, a comienzos del siglo XX, antes y durante su transformación como estación terminal del Ferrocarril del Norte. Archivo familiar.')">
+        <span class="plate-badge">Lámina 04, Panorámica Histórica</span>
+        <img src="imgs/barbosa.jpg" alt="Vista panorámica de Barbosa a comienzos de siglo" onerror="handleImgError(this, 'Lámina 04, panorámica compuesta de Barbosa, Santander, a comienzos del siglo XX.')">
+        <figcaption>
+          <strong>Fotografía 4.</strong> Vista panorámica de Barbosa, Santander, a comienzos del siglo XX. Con la llegada de la carrilera en 1935, la cabecera municipal pasó de 153 habitantes en 1938 a 2,422 en 1951, un salto de +1,483%.
+        </figcaption>
+      </figure>
+
+      <div class="grid-2-even">
+        <div>
+          <p>
+            Aunque originalmente se proyectó llevar el Ferrocarril del Norte hasta Bucaramanga, la línea solo alcanzó a construirse hasta <strong>Barbosa en 1935</strong>, BanRep, Junguito, 1997. Esa interrupción convirtió al municipio en un puerto seco obligado de transferencia entre el tren que subía desde Bogotá, pasando por Cajicá, Zipaquirá y Chiquinquirá, y los camiones que seguían hacia el norte de Santander.
+          </p>
+          <p>
+            Con visión comercial, Luis Ramón adquirió en <strong>1944</strong> un terreno contiguo a la plaza, la iglesia y los correos. Allí levantó una edificación con locales, bodegas, un pequeño hotel administrado por su esposa <strong>Elvira González</strong>, hasta su fallecimiento prematuro en 1946, y su almacén principal de abarrotes y ferretería, la <strong>tienda Bogotá</strong>.
+          </p>
+          <p>
+            Viajando personalmente a Bogotá para asegurar despachos fijos por tren, obtuvo la distribución exclusiva del diario liberal <em>El Tiempo</em> y, por buenas referencias comerciales, fue nombrado <strong>distribuidor único del azúcar del Valle del Cauca</strong> para Santander y Norte de Santander, llevando la contabilidad con una caja registradora de tirilla y viajando una vez al mes a consignar al Banco Comercial Antioqueño en Vélez.
+          </p>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:1.25rem;">
+          <!-- GRÁFICA 2A: EXPANSIÓN FERROVIARIA CON ETIQUETAS DE 1922 Y 1934 -->
+          <div class="chart-panel">
+            <div class="chart-header">
+              <div>
+                <h3 class="chart-title">Expansión de la Red Férrea, 1922 a 1934</h3>
+                <span class="chart-sub" id="rail-legend-sub">Gris claro km en 1922, oscuro km en 1934</span>
+              </div>
+              <button class="btn" id="btn-rail-mode" onclick="toggleRailChart()">Ver crecimiento %</button>
+            </div>
+            <div class="chart-area" style="height:195px;">
+              <svg id="svg-rail" viewBox="0 0 460 195" width="100%" height="100%"></svg>
+            </div>
+            <div class="chart-readout" id="readout-rail">
+              Santander duplicó su red férrea, de 92 km en 1922 a 192 km en 1934, un crecimiento de +108.7%, Muriel, 1983.
+            </div>
+          </div>
+
+          <!-- GRÁFICA 2B: DEMOGRAFÍA URBANA BARBOSA -->
+          <div class="chart-panel">
+            <div class="chart-header">
+              <h3 class="chart-title">Población Urbana de Barbosa, 1928 a 1960</h3>
+              <span class="chart-sub">Censos 1938 y 1951</span>
+            </div>
+            <div class="chart-area" style="height:175px;">
+              <svg id="svg-pop" viewBox="0 0 460 175" width="100%" height="100%"></svg>
+            </div>
+            <div class="chart-readout" id="readout-pop">
+              1951, 2,422 habitantes en cabecera, aumento de +1,483% frente a los 153 de 1938, DANE, 1954.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVIDENCIA DOCUMENTAL DE LOS CENSOS OFICIALES (LÁMINAS 05 Y 06) -->
+      <div class="census-block">
+        <span class="kicker">Fuentes Primarias, Contraloría General de la República, 1940</span>
+        <h3>La transición demográfica de Santander y la emergencia urbana de Barbosa</h3>
+        <p>
+          En el Censo General de Población de 1938, Santander seguía siendo un departamento abrumadoramente agrario, con <strong>80,8% rural</strong> frente a <strong>19,2% urbano</strong>, y Barbosa aparecía aún listada bajo el nombre de <em>Cite, Barbosa</em> en el extremo sur. Trece años después, en el Censo de 1951, su cabecera municipal había crecido más de quince veces gracias al intercambio ferroviario.
+        </p>
+
+        <div class="grid-2-even" style="margin-top:1.5rem;">
+          <figure class="plate" onclick="openLightbox('imgs/mapa38.png', 'Lámina 05, Censo de Población de 1938, Departamento de Santander, densidad de población por municipios, Contraloría General de la República, 1940. En el corredor sur aparecen listados los municipios 15, Cite, Barbosa y 34, Güepsa.')">
+            <span class="plate-badge">Lámina 05, Cartografía Censal, 1938</span>
+            <img src="imgs/mapa38.png" alt="Mapa de densidad de población de Santander, Censo de 1938" onerror="handleImgError(this, 'Lámina 05, mapa de densidad de población por municipios en Santander, Censo de 1938.')">
+            <figcaption>
+              <strong>Lámina Censal 1.</strong> Mapa de densidad de población por municipios en Santander, Censo de 1938. En el listado oficial figuran en el corredor sur los municipios <strong>15, Cite, Barbosa</strong> y <strong>34, Güepsa</strong>.
+            </figcaption>
+          </figure>
+
+          <figure class="plate" onclick="openLightbox('imgs/urbanaRural.png', 'Lámina 06, Censo de Población de 1938, Departamento de Santander, distribución de población urbana, 19,2% con 118.174 hab., y rural, 80,8% con 497.536 hab., Contraloría General de la República, 1940.')">
+            <span class="plate-badge">Lámina 06, Estructura Demográfica, 1938</span>
+            <img src="imgs/urbanaRural.png" alt="Gráfico original población urbana y rural de Santander, Censo de 1938" onerror="handleImgError(this, 'Lámina 06, distribución de población urbana, 19,2%, y rural, 80,8%, en Santander, Censo de 1938.')">
+            <figcaption>
+              <strong>Lámina Censal 2.</strong> Gráfico original del Censo de 1938. Santander registraba <strong>80,8% de población rural</strong>, con 497.536 hab., y <strong>19,2% urbana</strong>, con 118.174 hab., contexto en el que Barbosa despegó como polo urbano, creciendo +1,483% hacia 1951.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN IV: VIOLENCIA BIPARTIDISTA Y LAS 5 VISUALIZACIONES ANTES DE LÍNEA TEMPORAL -->
+  <section id="violencia" class="section">
+    <div class="container">
+      <span class="kicker">IV. Mediación política, prensa y archivos judiciales</span>
+      <h2>Neutralidad mercantil en La Violencia y contraste documental regional</h2>
+
+      <div class="grid-2">
+        <div>
+          <p>
+            Mientras municipios vecinos como Vélez o el corregimiento conservador de <strong>Cite</strong> vivieron intensos choques partidistas tras 1946, Barbosa mantuvo una marcada estabilidad comercial. Los registros de prensa analizados por Casallas Sierra, 2025, documentan apenas <strong>1 hecho violento en Barbosa frente a 27 en Vélez</strong>.
+          </p>
+          <p>
+            Aunque Luis Ramón era de filiación liberal, evitó mezclar la política con el mostrador, mantuvo relaciones cordiales con la parroquia, las autoridades locales y sus arrendatarios, entre ellos un vecino conservador oriundo de Cite que sirvió de puente para disuadir hostigamientos contra su familia.
+          </p>
+          <p>
+            Viudo desde 1946, destinó el excedente de la tienda, los arriendos y la distribución del azúcar a cumplir su mayor propósito, que sus dos hijos salieran de la provincia hacia la universidad. Su hijo mayor, <strong>Luis Cárdenas González</strong>, estudió Medicina en la Pontificia Universidad Javeriana, especializándose en Pediatría, y su hijo menor, <strong>Iván</strong>, estudió Medicina en la Universidad Nacional de Colombia, especializándose en Otorrinolaringología.
+          </p>
+        </div>
+
+        <figure class="plate" onclick="openLightbox('imgs/negociaciones.jpg', 'Lámina 07, negociaciones comerciales en Barbosa frente a la Importadora Barbosa Ford, reflejo del dinamismo mercantil y automotor del nodo santandereano a mediados del siglo XX. Archivo familiar.')">
+          <span class="plate-badge">Lámina 07, Dinamismo Comercial</span>
+          <img src="imgs/negociaciones.jpg" alt="Negociaciones comerciales en Barbosa frente a Importadora Ford" onerror="handleImgError(this, 'Lámina 07, negociaciones comerciales en Barbosa frente a Importadora Barbosa Ford.')">
+          <figcaption>
+            <strong>Fotografía 5.</strong> Negociaciones comerciales en Barbosa frente a la <em>Importadora Barbosa Ford</em>. El cruce del ferrocarril con las carreteras troncales consolidó un mercado activo de repuestos, transporte y mercancías al por mayor.
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- BLOQUE 1: GEOGRAFÍA DEL CONFLICTO EN LA HOYA DEL RÍO SUÁREZ           -->
+      <!-- ===================================================================== -->
+      <div class="viz-block" id="bloque-geografia">
+        <span class="kicker">Evidencia Hemerográfica 01, Casallas Sierra, 2025, Acevedo Tarazona, 2015</span>
+        <h3>1. Geografía del conflicto en el entorno de Barbosa, 1946 a 1958</h3>
+        <p>
+          Distribución territorial de los <strong>48 registros de violencia política</strong> publicados por <em>Vanguardia Liberal</em> en siete municipios de la Hoya del Río Suárez. La concentración informativa en Vélez, con 27 registros y 56.3%, contrasta con la escasa mención directa a Barbosa y Cite, con 1 registro y 2.1%.
+        </p>
+
+        <div class="map-box">
+          <div class="map-toolbar">
+            <div class="btn-group">
+              <button type="button" class="btn active" id="btn-geo-dual" onclick="setGeoMode('dual')">Mapa y gráfica</button>
+              <button type="button" class="btn" id="btn-geo-map" onclick="setGeoMode('map')">Solo mapa</button>
+              <button type="button" class="btn" id="btn-geo-chart" onclick="setGeoMode('chart')">Solo gráfica</button>
+            </div>
+            <span style="font-family:var(--ui); font-size:0.7rem; color:var(--muted);">Haz clic en un municipio del mapa o de las barras</span>
+          </div>
+
+          <div style="padding:1rem; background:var(--bg);">
+            <!-- Botones rápidos municipales -->
+            <div class="pill-bar" id="geo-pills"></div>
+
+            <!-- Rejilla equilibrada de dos columnas estiradas a la misma altura -->
+            <div id="geo-balanced-grid" class="grid-conflict-balanced">
+              <!-- COLUMNA IZQUIERDA: Mapa regional alto + Lectura territorial inmediatamente debajo -->
+              <div id="geo-left-col" class="conflict-col-left">
+                <div class="conflict-map-frame">
+                  <svg id="conflict-map" viewBox="0 0 520 435" style="width:100%; height:auto; display:block;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa de registros de violencia en la Hoya del Río Suárez, 1946 a 1958"></svg>
+                </div>
+
+                <div class="archival-note" style="margin:0; font-size:0.81rem;">
+                  <strong>Lectura territorial.</strong> Barbosa concentra apenas el 2.1% de los registros pese a estar rodeada de municipios con alta conflictividad rural como Vélez, Guavatá y Moniquirá, pues su estación terminal del ferrocarril operó como enclave mercantil neutral sin choques armados dentro del casco urbano, Casallas Sierra, 2025.
+                </div>
+              </div>
+
+              <!-- COLUMNA DERECHA: Tarjeta superior sin espacio tras el título + Ficha descriptiva abajo -->
+              <div id="geo-right-col" class="conflict-col-right">
+                <div id="geo-bars-panel" class="chart-panel" style="padding:0.9rem 1rem;">
+                  <div class="chart-header" style="margin-bottom:0.45rem; padding-bottom:0.45rem;">
+                    <h4 class="chart-title" style="margin:0; font-size:0.86rem; line-height:1.35;">Registros por municipio en Vanguardia Liberal, 1946 a 1958, n igual a 48</h4>
+                  </div>
+                  <svg id="svg-conflict-bars" viewBox="0 0 460 232" style="width:100%; height:auto; display:block;"></svg>
+                </div>
+
+                <div id="geo-detail-card" class="chart-panel" style="padding:0.95rem 1rem;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- BLOQUE 2: PRENSA Y CENSURA OFICIAL, 1946 A 1958                       -->
+      <!-- ===================================================================== -->
+      <div class="viz-block" id="bloque-censura">
+        <span class="kicker">Evidencia Hemerográfica 02, Casallas Sierra, 2025</span>
+        <h3>2. Registros de prensa y censura oficial, 1946 a 1958</h3>
+        <p>
+          Serie anual de los 48 registros en <em>Vanguardia Liberal</em>. El descenso abrupto de noticias a partir de 1948 y su desaparición entre 1950 y 1955 obedecen a las restricciones del estado de sitio y a la implantación de la censura previa en noviembre de 1949.
+        </p>
+
+        <div class="chart-panel">
+          <div class="chart-header">
+            <div>
+              <h4 class="chart-title" style="margin:0; font-size:0.88rem;">Frecuencia anual de registros en Vanguardia Liberal, 1946 a 1958</h4>
+              <span class="chart-sub">Franja sombreada, vigencia de censura oficial y vacíos hemerográficos</span>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn active" id="btn-press-total" onclick="setPressMode('total')">Total anual</button>
+              <button type="button" class="btn" id="btn-press-stacked" onclick="setPressMode('stacked')">Barbosa frente a municipios vecinos</button>
+            </div>
+          </div>
+
+          <div style="width:100%; overflow:hidden;">
+            <svg id="svg-press-censorship" viewBox="0 0 780 285" width="100%" height="auto"></svg>
+          </div>
+
+          <div class="chart-readout" id="readout-press"></div>
+        </div>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- BLOQUE 3: DOS CICLOS DE VIOLENCIA Y BRECHA JUDICIAL, 1930 A 1948      -->
+      <!-- ===================================================================== -->
+      <div class="viz-block" id="bloque-judicial">
+        <span class="kicker">Evidencia Judicial 03, Archivo Histórico Regional de la Universidad Industrial de Santander, AHR UIS, Pizza Uribe, 2018</span>
+        <h3>3. Dos ciclos de violencia en Santander y cobertura judicial, 1930 a 1948</h3>
+        <p>
+          Evolución anual de <strong>150 expedientes criminales</strong> por violencia política conservados en el Archivo Histórico Regional de la Universidad Industrial de Santander, sigla AHR UIS, en Bucaramanga, muestra tomada sobre 245 expedientes revisados de un total de 3.498 clasificados en el fondo judicial.
+        </p>
+
+        <!-- Gráfica principal: Curva anual 1930 a 1948 con etiquetas de oleadas arriba del área de trazado -->
+        <div class="chart-panel">
+          <div class="chart-header">
+            <h4 class="chart-title" style="margin:0; font-size:0.88rem;">Procesos judiciales por violencia política en Santander, 1930 a 1948</h4>
+            <span class="chart-sub" id="judicial-year-badge">Pico máximo, 1932 con 35 expedientes</span>
+          </div>
+          <div style="width:100%; overflow:hidden;">
+            <svg id="svg-judicial-cycles" viewBox="0 0 820 278" width="100%" height="auto"></svg>
+          </div>
+          <div class="chart-readout" id="readout-judicial">
+            1932, pico máximo de la primera oleada con 35 expedientes judiciales registrados en Santander, Pizza Uribe, 2018.
+          </div>
+        </div>
+
+        <!-- Párrafo formal de exactamente 3 oraciones breves debajo de la gráfica principal -->
+        <p style="margin-top:1rem; background:var(--paper); border:1px solid var(--line); padding:1rem 1.2rem; color:var(--ink);">
+          El aumento de causas judiciales en los años treinta obedeció al cambio de gobierno tras el fin de la hegemonía conservadora en 1930, transición que desató disputas por el control de alcaldías, policías locales y mesas electorales en los municipios santandereanos. Tras un decenio de menor registro procesal, las denuncias volvieron a escalar entre 1946 y 1948 con el retorno conservador a la presidencia y la reactivación de los enfrentamientos partidistas en la provincia. Finalmente, los sucesos del 9 de abril de 1948 tras el asesinato de Jorge Eliécer Gaitán aceleraron las represalias armadas y multiplicaron las causas criminales en el departamento.
+        </p>
+
+        <!-- Subgráficas B1 y B2 -->
+        <div class="grid-2-even" style="margin-top:1.25rem;">
+          <!-- Subgráfica B1: Cobertura provincial en el AHR UIS -->
+          <div class="chart-panel">
+            <div class="chart-header">
+              <h4 class="chart-title" style="margin:0; font-size:0.86rem;">Subgráfica B1, cobertura provincial en el Archivo Histórico Regional de la Universidad Industrial de Santander</h4>
+              <span class="chart-sub">n igual a 150 expedientes</span>
+            </div>
+            <div id="judicial-provinces-container"></div>
+            <div class="archival-note" style="margin:0.85rem 0 0 0; font-size:0.78rem;">
+              <strong>Explicación archivística, Ley 23 de 1912.</strong> La sigla AHR UIS corresponde al Archivo Histórico Regional de la Universidad Industrial de Santander, ubicado en Bucaramanga. El 1% registrado para la provincia de Vélez, jurisdicción a la que pertenecía Barbosa, responde a que el Circuito Judicial de Vélez dependía del Distrito Judicial de San Gil según la Ley 23 de 1912 y sus expedientes no habían sido trasladados a Bucaramanga, Pizza Uribe, 2018.
+            </div>
+          </div>
+
+          <!-- Subgráfica B2: Resolución procesal e impunidad -->
+          <div class="chart-panel">
+            <div class="chart-header">
+              <h4 class="chart-title" style="margin:0; font-size:0.86rem;">Subgráfica B2, resolución procesal e impunidad en los expedientes inventariados, Pizza Uribe, 2018</h4>
+              <span class="chart-sub">179 resoluciones inventariadas</span>
+            </div>
+
+            <div style="font-family:var(--ui); font-size:0.74rem; margin-top:0.5rem;">
+              <div style="display:flex; justify-content:space-between; font-weight:700; margin-bottom:0.35rem;">
+                <span style="color:var(--terracotta);">81% sin condena</span>
+                <span style="color:var(--accent);">19% con sentencia condenatoria</span>
+              </div>
+              <div style="display:flex; width:100%; height:24px; border:1px solid var(--line-dark); overflow:hidden;">
+                <div style="width:81%; background:var(--terracotta); color:#ffffff; display:flex; align-items:center; justify-content:center; font-weight:600;">81% sin condena</div>
+                <div style="width:19%; background:var(--accent); color:#ffffff; display:flex; align-items:center; justify-content:center; font-weight:600;">19%</div>
+              </div>
+            </div>
+
+            <!-- 7 recuadros desglosados -->
+            <div class="impunity-grid-7" id="impunity-breakdown-grid"></div>
+
+            <!-- Breve explicación formal debajo de los 7 recuadros -->
+            <p style="font-size:0.8rem; color:var(--ink-soft); margin:0.85rem 0 0 0;">
+              Esta elevada proporción de causas cerradas mediante sobreseimientos, absoluciones y prescripciones frente a apenas 19% de sentencias condenatorias demuestra una impunidad estructural en los juzgados provinciales, factor que desincentivó las denuncias formales y acentuó el subregistro judicial en las zonas rurales, Pizza Uribe, 2018.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- BLOQUE 4: TIPOLOGÍA PENAL Y DETONANTES JUDICIALES, 1930 A 1948        -->
+      <!-- ===================================================================== -->
+      <div class="viz-block" id="bloque-tipologia">
+        <span class="kicker">Evidencia Judicial 04, Archivo Histórico Regional de la Universidad Industrial de Santander, AHR UIS, Pizza Uribe, 2018</span>
+        <h3>4. Tipología penal y detonantes en los expedientes judiciales, 1930 a 1948</h3>
+        <p>
+          Clasificación de los delitos instruidos en los 150 expedientes examinados y distribución porcentual de los factores inmediatos consignados en las declaraciones testimoniales. Selecciona cualquier categoría para consultar su alcance documental.
+        </p>
+
+        <div class="grid-2-even">
+          <div class="chart-panel">
+            <div class="chart-header">
+              <h4 class="chart-title" style="margin:0; font-size:0.86rem;">Delitos registrados en los expedientes, n igual a 150</h4>
+              <span class="chart-sub">154 víctimas mortales en homicidio</span>
+            </div>
+            <div id="crimes-bars-container"></div>
+          </div>
+
+          <div class="chart-panel">
+            <div class="chart-header">
+              <h4 class="chart-title" style="margin:0; font-size:0.86rem;">Detonantes documentados en los sumarios</h4>
+              <span class="chart-sub">Factores consignados en declaraciones</span>
+            </div>
+            <div id="triggers-bars-container"></div>
+          </div>
+        </div>
+
+        <div class="chart-readout" id="readout-typology" style="background:var(--paper); border:1px solid var(--line); padding:0.85rem 1rem; margin-top:0.85rem;"></div>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- BLOQUE 5: SESGO EDITORIAL DE LA PRENSA Y PERTINENCIA DEL ARCHIVO      -->
+      <!-- ===================================================================== -->
+      <div class="viz-block" id="bloque-prensa-comparada">
+        <span class="kicker">Evidencia Historiográfica 05, Acevedo Tarazona, 2015, Casallas Sierra, 2025</span>
+        <h3>5. Sesgo editorial de la prensa partidista y pertinencia del archivo familiar</h3>
+        <p>
+          Dentro de un panorama nacional de <strong>2.708 publicaciones periódicas</strong> catalogadas en la Biblioteca Nacional durante la primera mitad del siglo XX, Acevedo Tarazona, 2015, los diarios santandereanos operaron como órganos de adscripción partidista que orientaron la selección y el tratamiento informativo de los conflictos locales.
+        </p>
+
+        <div class="grid-2-even">
+          <!-- Columna Vanguardia Liberal -->
+          <div class="press-card liberal">
+            <span class="plate-badge" style="color:var(--terracotta);">Prensa Liberal de Bucaramanga</span>
+            <h4 style="margin:0 0 0.5rem 0; font-size:1.05rem;">Vanguardia Liberal, 1946 a 1958</h4>
+            <div class="press-item">
+              <h4>Denuncia de agresiones conservadoras y clericales</h4>
+              <p style="margin:0; font-size:0.82rem;">
+                Documentó agresiones físicas, irregularidades electorales y sermones parroquiales dirigidos contra ciudadanos liberales en los municipios de la provincia de Vélez, Casallas Sierra, 2025.
+              </p>
+            </div>
+            <div class="press-item">
+              <h4>Centralidad de Vélez frente a Barbosa</h4>
+              <p style="margin:0; font-size:0.82rem;">
+                Concentró 27 de sus 48 registros en la cabecera provincial de Vélez y consignó un único episodio directo en jurisdicción de Barbosa, el homicidio de dos liberales en el corregimiento de Cite el 29 de marzo de 1949, ocurrido en represalia por la muerte del conservador Pinzón Camacho, Casallas Sierra, 2025.
+              </p>
+            </div>
+            <div class="press-item">
+              <h4>Silencio por censura desde 1949</h4>
+              <p style="margin:0; font-size:0.82rem;">
+                Tras la declaratoria del estado de sitio en noviembre de 1949, el diario circuló bajo revisión oficial con el aviso Esta edición ha sido visada por la censura oficial, interrumpiendo el registro informativo sobre la región entre 1950 y 1955, Casallas Sierra, 2025.
+              </p>
+            </div>
+          </div>
+
+          <!-- Columna El Deber -->
+          <div class="press-card conservative">
+            <span class="plate-badge">Prensa Conservadora, fundada en 1923</span>
+            <h4 style="margin:0 0 0.5rem 0; font-size:1.05rem;">El Deber, 1930 a 1946</h4>
+            <div class="press-item">
+              <h4>Denuncia de violencia oficial liberal</h4>
+              <p style="margin:0; font-size:0.82rem;">
+                Dirigido en Bucaramanga por Manuel Serrano Blanco y Juan Cristóbal Martínez, denunció durante la República Liberal los abusos de las autoridades policiales contra poblaciones conservadoras y justificó la defensa armada en septiembre de 1931, Acevedo Tarazona, 2015.
+              </p>
+            </div>
+            <div class="press-item">
+              <h4>Cobertura del éxodo campesino en Gámbita en marzo de 1935</h4>
+              <p style="margin:0; font-size:0.82rem;">
+                En marzo de 1935 informó sobre hostigamiento religioso y desplazamiento de familias campesinas en Gámbita, municipio colindante con Barbosa y Moniquirá, lo que evidencia tensiones tempranas en la frontera sur del departamento, Acevedo Tarazona, 2015.
+              </p>
+            </div>
+            <div class="press-item">
+              <h4>Ataques contra sus instalaciones</h4>
+              <p style="margin:0; font-size:0.82rem;">
+                La polarización editorial derivó en asonadas que destruyeron los talleres e instalaciones de <em>El Deber</em> en Bucaramanga en julio de 1932 y mayo de 1946, Acevedo Tarazona, 2015.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Párrafo de balance metodológico SIN título en negrilla encima -->
+        <div class="method-balance">
+          <p style="margin:0; font-size:0.88rem; color:var(--ink-soft);">
+            La confrontación sistemática de los acervos hemerográficos y judiciales demuestra que la escasa presencia de Barbosa en los registros públicos obedece a tres filtros documentales, la prioridad editorial otorgada por <em>Vanguardia Liberal</em> y <em>El Deber</em> a las capitales y a sus propias agendas partidistas, Acevedo Tarazona, 2015, Casallas Sierra, 2025, el silencio informativo impuesto por la censura oficial desde noviembre de 1949, Casallas Sierra, 2025, y la fragmentación de los expedientes del Distrito Judicial de San Gil sumada a un 81% de procesos sin condena en Santander, Pizza Uribe, 2018. Ante estas limitaciones de las fuentes institucionales, la microhistoria familiar resulta indispensable para reconstruir la actividad mercantil, las redes de mediación local y la movilidad educativa vividas en la estación ferroviaria de Barbosa, tal como lo documenta el Archivo Histórico Familiar, Caso de Luis Ramón Cárdenas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN V: LÍNEA TEMPORAL VERTICAL -->
+  <section id="cronologia" class="section">
+    <div class="container">
+      <span class="kicker">V. Cronología articulada</span>
+      <h2>Línea temporal, trayectoria familiar y contexto nacional</h2>
+      <p>Los hitos empresariales de Luis Ramón Cárdenas en paralelo con las coyunturas económicas y políticas de Colombia entre 1894 y 1965.</p>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-meta">1894 a 1919 <span>ORÍGENES, ARRIERÍA</span></div>
+          <p>Nace en Güepsa, Santander, en 1894. Tras estudiar hasta segundo de bachillerato en Vélez, recorre los caminos del departamento vendiendo máquinas de coser Singer a lomo de mula para formar su primer capital. <span class="tl-cite">Archivo familiar, Libreta Militar.</span></p>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-meta">1920 a 1928 <span>MANUFACTURA, BOGOTÁ</span></div>
+          <p>Importa maquinaria de calzado por el puerto de Buenaventura y abre una fábrica de zapatos en Bogotá junto a su hermano, aprovechando la expansión del crédito urbano. <span class="tl-cite">Junguito, 1997, Lámina 03.</span></p>
+        </div>
+
+        <div class="tl-item major">
+          <div class="tl-dot"></div>
+          <div class="tl-meta">1929 a 1934 <span>GRAN DEPRESIÓN, QUIEBRA</span></div>
+          <p>El PIB real cae -3.2% entre 1929 y 1931, la iliquidez obliga a liquidar la fábrica en Bogotá. Regresa a Güepsa con Elvira González, vive en casa de su madre y ejerce como tesorero municipal. En 1933 nace su hijo Luis. <span class="tl-cite">GRECO, 2002, Pizza Uribe, 2018.</span></p>
+        </div>
+
+        <div class="tl-item major">
+          <div class="tl-dot"></div>
+          <div class="tl-meta">1935 a 1945 <span>FERROCARRIL, BARBOSA</span></div>
+          <p>El Ferrocarril del Norte llega hasta Barbosa en 1935. En 1944 compra un lote estratégico junto a la plaza y construye la tienda Bogotá, bodegas, locales y un hotel administrado por Elvira González. <span class="tl-cite">BanRep, Contraloría, 1940.</span></p>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-meta">1946 a 1958 <span>LA VIOLENCIA, COMERCIO MAYORISTA</span></div>
+          <p>Tras la muerte de Elvira en 1946, arrienda el hotel y consolida la distribución exclusiva de <em>El Tiempo</em> y del azúcar del Valle del Cauca hacia los Santanderes, manteniendo neutralidad política en medio de La Violencia. <span class="tl-cite">Casallas Sierra, 2025, DANE, 1954.</span></p>
+        </div>
+
+        <div class="tl-item major">
+          <div class="tl-dot"></div>
+          <div class="tl-meta">Años 1960 <span>LEGADO EDUCATIVO, BOGOTÁ</span></div>
+          <p>Con los ahorros acumulados en Barbosa financia los estudios universitarios de sus dos hijos en Bogotá, Luis en Pediatría en la U. Javeriana e Iván en Otorrinolaringología en la U. Nacional, culminando su proyecto de movilidad social. <span class="tl-cite">Relatos orales familia Cárdenas González.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN VI: EXPLORADOR DE DATOS Y BIBLIOGRAFÍA APA -->
+  <section id="datos" class="section" style="border-bottom:none;">
+    <div class="container">
+      <span class="kicker">VI. Respaldo cuantitativo y documental</span>
+      <h2>Explorador de indicadores históricos, 1920 a 1960</h2>
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem;">
+        <p style="margin:0;">Filtra por año, variable o fuente primaria.</p>
+        <input type="text" id="table-search" class="search-input" placeholder="Buscar, por ejemplo 1929, Barbosa, GRECO, DANE." oninput="filterTable()">
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Periodo</th>
+              <th>Variable o Indicador</th>
+              <th>Escala</th>
+              <th>Dato Histórico</th>
+              <th>Fuente</th>
+              <th>Articulación Caso Cárdenas</th>
+            </tr>
+          </thead>
+          <tbody id="data-tbody">
+            <tr>
+              <td><strong>1929 a 1931</strong></td>
+              <td>Contracción del PIB Real</td>
+              <td>Nacional</td>
+              <td style="color:var(--terracotta); font-weight:600;">-3.2%</td>
+              <td>GRECO, 2002</td>
+              <td>Cierre y liquidación de la fábrica de calzado en Bogotá</td>
+            </tr>
+            <tr>
+              <td><strong>1922 a 1934</strong></td>
+              <td>Extensión red férrea Santander</td>
+              <td>Departamental</td>
+              <td style="color:var(--accent); font-weight:600;">+108.7%, de 92 a 192 km</td>
+              <td>Muriel, 1983, Junguito, 1997</td>
+              <td>Llegada del tren a Barbosa en 1935 y creación de puerto seco</td>
+            </tr>
+            <tr>
+              <td><strong>1930 a 1948</strong></td>
+              <td>Expedientes judiciales e impunidad en Santander</td>
+              <td>Departamental</td>
+              <td>Pico en 1932 con 35 casos, 81% sin condena</td>
+              <td>Pizza Uribe, 2018</td>
+              <td>Subregistro de Vélez con 1% por pertenecer al Distrito Judicial de San Gil</td>
+            </tr>
+            <tr>
+              <td><strong>1930 a 1946</strong></td>
+              <td>Cobertura prensa conservadora en frontera sur</td>
+              <td>Regional</td>
+              <td>Reportes de éxodo en Gámbita en marzo de 1935</td>
+              <td>Acevedo Tarazona, 2015</td>
+              <td>Evidencia del sesgo editorial partidista en Bucaramanga</td>
+            </tr>
+            <tr>
+              <td><strong>1938 a 1951</strong></td>
+              <td>Población cabecera de Barbosa</td>
+              <td>Municipal</td>
+              <td style="color:var(--accent); font-weight:600;">+1,483%, de 153 a 2,422 hab.</td>
+              <td>Contraloría, 1940, DANE, 1954</td>
+              <td>Compra de lote central en 1944 y apertura de tienda Bogotá</td>
+            </tr>
+            <tr>
+              <td><strong>1946 a 1958</strong></td>
+              <td>Registros de violencia en prensa liberal y censura</td>
+              <td>Provincial</td>
+              <td style="color:var(--accent); font-weight:600;">Barbosa 1 frente a Vélez 27, censura nov. 1949</td>
+              <td>Casallas Sierra, 2025</td>
+              <td>Refugio comercial neutral y necesidad del archivo familiar ante silencio de prensa</td>
+            </tr>
+            <tr>
+              <td><strong>1953 a 1957</strong></td>
+              <td>Control cambiario y divisas</td>
+              <td>Nacional</td>
+              <td>Dólar preferencial industrial</td>
+              <td>Jaramillo Echeverri et al., 2019</td>
+              <td>Restricciones de importación directa, consolidación del comercio interno</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 style="margin-top:3rem;">Referencias bibliográficas, APA 7.ª edición</h2>
+      <div class="apa">Acevedo Tarazona, Á., 2015. <em>El Deber y la prensa conservadora en Santander, violencia política y lucha partidista, 1930 a 1946</em>. Universidad Industrial de Santander.</div>
+      <div class="apa">Banco de la República, s. f. <em>Ferrocarril del Norte, 1889 a 1935</em>. Banrepcultural.</div>
+      <div class="apa">Casallas Sierra, J. N., 2025. <em>Narrativas presentes en la prensa regional sobre el periodo de La Violencia, 1946 a 1958, en el municipio de Barbosa, Santander, y sus alrededores, un análisis a partir del periódico Vanguardia Liberal</em>. Universidad Distrital Francisco José de Caldas.</div>
+      <div class="apa">Contraloría General de la República, 1940. <em>Censo general de población, 5 de julio de 1938</em>. Imprenta Nacional.</div>
+      <div class="apa">DANE, 1954. <em>Censo general de población de 1951, Departamento de Santander</em>. Departamento Administrativo Nacional de Estadística.</div>
+      <div class="apa">GRECO, Grupo de Estudios del Crecimiento Económico Colombiano, 2002. <em>El crecimiento económico colombiano en el siglo XX</em>. Banco de la República y Fondo de Cultura Económica.</div>
+      <div class="apa">Jaramillo Echeverri, J., Meisel Roca, A., y Ramírez Giraldo, M. T., 2019. More than 100 years of improvements in living standards, The case of Colombia. <em>Cliometrica</em>, 13, 3, 323 a 366.</div>
+      <div class="apa">Junguito, A., 1997. Historia económica del Ferrocarril del Norte. <em>Historia Crítica</em>, 14, 129 a 146.</div>
+      <div class="apa">Muriel, R. D., 1983. Colombia, desarrollo de la economía primario exportadora y expansión ferroviaria, 1880 a 1929. <em>Lecturas de Economía</em>, 11, 35 a 68.</div>
+      <div class="apa">Pizza Uribe, E. J., 2018. <em>Violencia política e impunidad, casos en Santander identificados en los expedientes del Fondo Judicial durante el periodo 1930 a 1948</em>. Universidad Industrial de Santander.</div>
+      <div class="apa">Safford, F., y Palacios, M., 2002. <em>Colombia, país fragmentado, sociedad dividida</em>. Editorial Norma.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>Archivo Histórico Familiar, Caso de Luis Ramón Cárdenas.</span>
+      <span class="footer-author">Autor, PABLO NOVOA, 202321115.</span>
+    </div>
+  </footer>
+
+  <!-- MODAL LIGHTBOX PARA AMPLIAR FOTOGRAFÍAS Y LÁMINAS CENSALES -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <div class="lb-inner" onclick="event.stopPropagation()">
+      <img id="lb-img" src="" alt="Vista ampliada">
+      <div id="lb-fallback" class="lb-fallback-box" style="display:none;"></div>
+      <div class="lb-foot">
+        <span id="lb-cap"></span>
+        <button class="btn" onclick="closeLightbox()">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // =========================================================================
+    // 1. GESTIÓN DE IMÁGENES LOCALES Y RESPALDO EN PREVIEW AISLADO
+    // =========================================================================
+    const missingImgs = new Set();
+
+    function handleImgError(img, label) {
+      const src = img.getAttribute('src');
+      missingImgs.add(src);
+      const box = document.createElement('div');
+      box.className = 'img-fallback';
+      box.innerHTML = `<strong>Archivo Documental Local</strong><br>${label}<br><span style="color:#75746c;">Ruta vinculada, <code>${src}</code></span>`;
+      img.replaceWith(box);
+    }
+
+    // =========================================================================
+    // 2. LIGHTBOX DE INSPECCIÓN DE LÁMINAS
+    // =========================================================================
+    function openLightbox(src, caption) {
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lb-img');
+      const lbFallback = document.getElementById('lb-fallback');
+      document.getElementById('lb-cap').textContent = caption;
+
+      if (missingImgs.has(src)) {
+        lbImg.style.display = 'none';
+        lbFallback.style.display = 'block';
+        lbFallback.innerHTML = `<strong>Ficha de Archivo, ${src}</strong><br><br>${caption}<br><br><span style="color:#75746c;">Al abrir este archivo en GitHub Pages con la carpeta <code>imgs/</code>, se mostrará la fotografía original en alta resolución.</span>`;
+      } else {
+        lbFallback.style.display = 'none';
+        lbImg.style.display = 'block';
+        lbImg.src = src;
+      }
+      lb.classList.add('open');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // =========================================================================
+    // 3. MAPA INTERACTIVO DEL CORREDOR FERROVIARIO PACÍFICO Y ANDES
+    // =========================================================================
+    const mapNodes = {
+      1: {
+        title: "1, Güepsa, Santander, Origen y retorno tras 1929, 1894 y 1930 a 1943.",
+        desc: "Lugar de nacimiento de Luis Ramón en 1894 y de su hijo Luis en 1933. Desde allí emprendió sus primeros viajes vendiendo máquinas Singer en mula y allí regresó tras la quiebra de 1929 para trabajar como tesorero municipal."
+      },
+      2: {
+        title: "2, Puerto de Buenaventura, Puerta de importación y del azúcar, años 1920 a 1950.",
+        desc: "Muelle por donde ingresó en los años veinte la maquinaria para su fábrica de calzado en Bogotá. Décadas después fue punto de partida de los grandes cargamentos de azúcar del Valle hacia Santander."
+      },
+      3: {
+        title: "3, Cali, Armenia e Ibagué, Conexión intermodal Ferrocarril del Pacífico.",
+        desc: "El azúcar salía de los ingenios del Valle por el Ferrocarril del Pacífico hasta Armenia, cruzaba la Cordillera Central en camión por el paso del Quindío hasta Ibagué y seguía en tren hacia Bogotá."
+      },
+      4: {
+        title: "4, Bogotá D.E., Fábrica de calzado, 1920 a 1929, y destino universitario, años 60.",
+        desc: "Sede de su taller de calzado liquidado durante la Gran Depresión. En los años cuarenta fue su plaza de compras mayoristas despachadas por tren a Barbosa, y en los sesenta acogió a sus hijos Luis e Iván en Medicina."
+      },
+      5: {
+        title: "5, Barbosa, Santander, Estación Terminal del Ferrocarril del Norte, 1935 a 1960.",
+        desc: "Punta de rieles del Ferrocarril del Norte desde 1935 y cruce obligatorio hacia Santander y la costa Atlántica. En 1944 Luis Ramón compra un lote estratégico junto a la plaza, funda la tienda Bogotá y distribuye en exclusiva El Tiempo y azúcar del Valle del Cauca."
+      },
+      6: {
+        title: "6, Vélez y Cite, Cabecera provincial, banca y mediación en La Violencia.",
+        desc: "En Vélez estudió en el Colegio Nacional y consignaba mensualmente en el Banco Comercial Antioqueño. Pese a los focos violentos en Vélez y el vecino pueblo conservador de Cite, Barbosa operó como refugio mercantil neutral."
+      }
+    };
+    let currentNode = 5;
+
+    function selectNode(id) {
+      currentNode = id;
+      document.getElementById('node-title').textContent = mapNodes[id].title;
+      document.getElementById('node-desc').textContent = mapNodes[id].desc;
+      document.querySelectorAll('#corridor-map .map-node .node-ring').forEach(r => {
+        if (r.parentElement.id !== 'node-5') {
+          r.setAttribute('fill', '#faf9f4');
+        } else {
+          r.setAttribute('fill', '#2c5559');
+        }
+      });
+      const activeRing = document.querySelector(`#node-${id} .node-ring`);
+      if (activeRing && id !== 5) activeRing.setAttribute('fill', '#d9e5e3');
+    }
+
+    function stepNode(dir) {
+      const order = [1, 2, 3, 4, 5, 6];
+      const idx = order.indexOf(currentNode);
+      const next = order[(idx + dir + order.length) % order.length];
+      selectNode(next);
+    }
+
+    function setMapView(mode) {
+      const svg = document.getElementById('corridor-map');
+      document.getElementById('btn-view-all').classList.toggle('active', mode === 'all');
+      document.getElementById('btn-view-andes').classList.toggle('active', mode === 'andes');
+      if (mode === 'andes') {
+        svg.setAttribute('viewBox', '435 42 415 295');
+      } else {
+        svg.setAttribute('viewBox', '0 0 920 520');
+      }
+    }
+
+    // =========================================================================
+    // 4. GRÁFICAS HISTÓRICAS PRINCIPALES
+    // =========================================================================
+    const gdpSeries = [
+      { y: 1927, v: 49.5, note: "1927, expansión cafetera e inversión pública en ferrocarriles." },
+      { y: 1928, v: 51.2, note: "1928, auge de manufacturas urbanas y crédito en Bogotá." },
+      { y: 1929, v: 54.0, note: "1929, estallido de la Gran Depresión y cierre del crédito externo." },
+      { y: 1930, v: 53.1, note: "1930, contracción de liquidez y caída del consumo en la capital." },
+      { y: 1931, v: 52.3, note: "1931, punto mínimo, -3.2% frente a 1929, quiebra de la fábrica de calzado." },
+      { y: 1932, v: 53.4, note: "1932, inicio de recuperación, Luis Ramón se reorganiza en Güepsa." },
+      { y: 1933, v: 55.2, note: "1933, nace Luis Cárdenas González en Güepsa." },
+      { y: 1934, v: 58.1, note: "1934, reactivación del mercado interno." },
+      { y: 1935, v: 61.0, note: "1935, el Ferrocarril del Norte alcanza la estación de Barbosa." }
+    ];
+
+    function renderGdpChart() {
+      const svg = document.getElementById('svg-gdp');
+      const w = 500, h = 215;
+      const p = { t: 20, r: 24, b: 28, l: 40 };
+      const min = 46, max = 64;
+      const gx = i => p.l + (i / (gdpSeries.length - 1)) * (w - p.l - p.r);
+      const gy = v => h - p.b - ((v - min) / (max - min)) * (h - p.t - p.b);
+      let out = '';
+
+      out += `<rect x="${gx(2)}" y="${p.t}" width="${gx(4)-gx(2)}" height="${h-p.t-p.b}" fill="#8c3b2b" opacity="0.12"/>`;
+      [48, 52, 56, 60].forEach(val => {
+        out += `<line x1="${p.l}" y1="${gy(val)}" x2="${w-p.r}" y2="${gy(val)}" stroke="#d6d4c7" stroke-dasharray="3,3"/>`;
+        out += `<text x="${p.l-6}" y="${gy(val)+3}" text-anchor="end" font-size="10" fill="#75746c">${val}</text>`;
+      });
+
+      const d = gdpSeries.map((pt, i) => `${i===0?'M':'L'} ${gx(i)} ${gy(pt.v)}`).join(' ');
+      out += `<path d="${d}" fill="none" stroke="#1e1e1c" stroke-width="2.2"/>`;
+
+      gdpSeries.forEach((pt, i) => {
+        const isCrisis = i >= 2 && i <= 4;
+        out += `<text x="${gx(i)}" y="${h-8}" text-anchor="middle" font-size="10" fill="${isCrisis?'#8c3b2b':'#4e4e48'}" font-weight="${isCrisis?'bold':'normal'}">${pt.y}</text>`;
+        out += `<circle cx="${gx(i)}" cy="${gy(pt.v)}" r="${i===4?6:4.5}" fill="${isCrisis?'#8c3b2b':'#2c5559'}" stroke="#faf9f4" stroke-width="1.5" style="cursor:pointer"
+          onmouseenter="document.getElementById('readout-gdp').textContent='${pt.note}'"
+          onclick="document.getElementById('readout-gdp').textContent='${pt.note}'"/>`;
+      });
+      svg.innerHTML = out;
+    }
+
+    // Gráfica 2A: Ferrocarriles
+    let railMode = 'km';
+    const railData = [
+      { reg: "Santander", km22: 92, km34: 192, pct: 108.7 },
+      { reg: "Pacífico", km22: 341, km34: 678, pct: 98.8 },
+      { reg: "Cundinamarca", km22: 249, km34: 626, pct: 151.4 },
+      { reg: "Antioquia", km22: 242, km34: 439, pct: 81.4 }
+    ];
+
+    function toggleRailChart() {
+      railMode = railMode === 'km' ? 'pct' : 'km';
+      document.getElementById('btn-rail-mode').textContent = railMode === 'km' ? 'Ver crecimiento %' : 'Ver kilómetros';
+      document.getElementById('rail-legend-sub').textContent = railMode === 'km'
+        ? 'Gris claro km en 1922, oscuro km en 1934'
+        : 'Incremento porcentual acumulado, 1922 a 1934';
+      renderRailChart();
+    }
+
+    function renderRailChart() {
+      const svg = document.getElementById('svg-rail');
+      const w = 460, h = 195;
+      const p = { t: 28, r: 16, b: 28, l: 24 };
+      const maxVal = railMode === 'km' ? 750 : 175;
+      const gy = v => h - p.b - (v / maxVal) * (h - p.t - p.b);
+      let out = '';
+
+      out += `<line x1="${p.l}" y1="${h-p.b}" x2="${w-p.r}" y2="${h-p.b}" stroke="#8e8c7f" stroke-width="1"/>`;
+
+      if (railMode === 'km') {
+        out += `<rect x="26" y="6" width="9" height="9" fill="#b8b6a8"/>`;
+        out += `<text x="39" y="14" font-size="9" fill="#4e4e48">1922, km</text>`;
+        out += `<rect x="102" y="6" width="9" height="9" fill="#2c5559"/>`;
+        out += `<text x="115" y="14" font-size="9" fill="#1e1e1c">1934, km</text>`;
+      }
+
+      railData.forEach((d, i) => {
+        const cx = p.l + (i + 0.5) * ((w - p.l - p.r) / railData.length);
+        const hi = d.reg === 'Santander' || d.reg === 'Pacífico';
+        const info = `${d.reg}, ${d.km22} km en 1922 a ${d.km34} km en 1934, crecimiento de +${d.pct}%, Muriel, 1983.`;
+        if (railMode === 'km') {
+          out += `<rect x="${cx-21}" y="${gy(d.km22)}" width="19" height="${h-p.b-gy(d.km22)}" fill="#b8b6a8" style="cursor:pointer" onmouseenter="document.getElementById('readout-rail').textContent='${info}'" onclick="document.getElementById('readout-rail').textContent='${info}'"/>`;
+          out += `<text x="${cx-11.5}" y="${gy(d.km22)-4}" text-anchor="middle" font-size="9" fill="#5b5950">${d.km22}</text>`;
+
+          out += `<rect x="${cx+2}" y="${gy(d.km34)}" width="19" height="${h-p.b-gy(d.km34)}" fill="${hi?'#2c5559':'#4e4e48'}" style="cursor:pointer" onmouseenter="document.getElementById('readout-rail').textContent='${info}'" onclick="document.getElementById('readout-rail').textContent='${info}'"/>`;
+          out += `<text x="${cx+11.5}" y="${gy(d.km34)-4}" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1e1e1c">${d.km34}</text>`;
+        } else {
+          out += `<rect x="${cx-15}" y="${gy(d.pct)}" width="30" height="${h-p.b-gy(d.pct)}" fill="${hi?'#2c5559':'#4e4e48'}" style="cursor:pointer" onmouseenter="document.getElementById('readout-rail').textContent='${info}'" onclick="document.getElementById('readout-rail').textContent='${info}'"/>`;
+          out += `<text x="${cx}" y="${gy(d.pct)-5}" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1e1e1c">+${d.pct}%</text>`;
+        }
+        out += `<text x="${cx}" y="${h-9}" text-anchor="middle" font-size="10" fill="${hi?'#2c5559':'#4e4e48'}" font-weight="${hi?'bold':'normal'}">${d.reg}</text>`;
+      });
+      svg.innerHTML = out;
+    }
+
+    // Gráfica 2B: Demografía Barbosa
+    const popData = [
+      { y: 1928, v: 95, note: "1928, 95 habitantes en casco urbano, caserío previo a la estación terminal." },
+      { y: 1938, v: 153, note: "1938, 153 habitantes en cabecera, 4,903 total municipio Cite y Barbosa, Contraloría, 1940." },
+      { y: 1951, v: 2422, note: "1951, 2,422 habitantes en cabecera, aumento de +1,483% frente a los 153 de 1938, DANE, 1954." },
+      { y: 1960, v: 4150, note: "1960, cerca de 4,150 habitantes, consolidación urbana y comercial de Barbosa." }
+    ];
+
+    function renderPopChart() {
+      const svg = document.getElementById('svg-pop');
+      const w = 460, h = 175;
+      const p = { t: 22, r: 20, b: 26, l: 42 };
+      const gy = v => h - p.b - (v / 4600) * (h - p.t - p.b);
+      let out = '';
+      popData.forEach((d, i) => {
+        const cx = p.l + (i + 0.5) * ((w - p.l - p.r) / popData.length);
+        const bh = Math.max(h - p.b - gy(d.v), 5);
+        out += `<rect x="${cx-16}" y="${h-p.b-bh}" width="32" height="${bh}" fill="${d.y===1951?'#8c3b2b':'#2c5559'}" style="cursor:pointer" onmouseenter="document.getElementById('readout-pop').textContent='${d.note}'" onclick="document.getElementById('readout-pop').textContent='${d.note}'"/>`;
+        out += `<text x="${cx}" y="${h-p.b-bh-5}" text-anchor="middle" font-size="9.5" fill="#1e1e1c">${d.v.toLocaleString()}</text>`;
+        out += `<text x="${cx}" y="${h-8}" text-anchor="middle" font-size="10" fill="#4e4e48">${d.y}</text>`;
+      });
+      svg.innerHTML = out;
+    }
+
+    // =========================================================================
+    // 5. BLOQUE 1: GEOGRAFÍA DEL CONFLICTO EN HOYA DEL RÍO SUÁREZ
+    // =========================================================================
+    const conflictMunicipalities = [
+      {
+        id: 'velez',
+        name: 'Vélez',
+        dept: 'Santander',
+        count: 27,
+        pct: '56.3%',
+        x: 152,
+        y: 120,
+        labelPos: 'left',
+        isBarbosa: false,
+        years: { 1946: 8, 1947: 15, 1948: 3, 1949: 0, 1956: 1 },
+        breakdown: '1946 con 8, 1947 con 15, 1948 con 3, 1956 con 1',
+        note: 'Cabecera provincial y principal foco de atención de Vanguardia Liberal. Concentra más de la mitad de los reportes de violencia política en la subregión entre 1946 y 1958, Casallas Sierra, 2025.'
+      },
+      {
+        id: 'guavata',
+        name: 'Guavatá',
+        dept: 'Santander',
+        count: 7,
+        pct: '14.6%',
+        x: 122,
+        y: 210,
+        labelPos: 'left',
+        isBarbosa: false,
+        years: { 1946: 7, 1947: 0, 1948: 0, 1949: 0, 1956: 0 },
+        breakdown: '1946 con 7',
+        note: 'Segundo municipio con mayor número de registros, concentrados en 1946 por episodios electorales, amenazas y agresiones en veredas vecinas, Casallas Sierra, 2025.'
+      },
+      {
+        id: 'moniquira',
+        name: 'Moniquirá',
+        dept: 'Boyacá',
+        count: 5,
+        pct: '10.4%',
+        x: 382,
+        y: 256,
+        labelPos: 'right',
+        isBarbosa: false,
+        years: { 1946: 0, 1947: 4, 1948: 0, 1949: 1, 1956: 0 },
+        breakdown: '1947 con 4, 1949 con 1',
+        note: 'Municipio boyacense limítrofe con Barbosa sobre el corredor vial y comercial de la Hoya del Río Suárez, con hechos reportados en 1947 y 1949, Casallas Sierra, 2025.'
+      },
+      {
+        id: 'jesus-maria',
+        name: 'Jesús María',
+        dept: 'Santander',
+        count: 4,
+        pct: '8.3%',
+        x: 98,
+        y: 296,
+        labelPos: 'left',
+        isBarbosa: false,
+        years: { 1946: 1, 1947: 2, 1948: 1, 1949: 0, 1956: 0 },
+        breakdown: '1946 con 1, 1947 con 2, 1948 con 1',
+        note: 'Registros continuos entre 1946 y 1948 en el sector suroccidental de la provincia de Vélez, Casallas Sierra, 2025.'
+      },
+      {
+        id: 'puente-nacional',
+        name: 'Puente Nacional',
+        dept: 'Santander',
+        count: 3,
+        pct: '6.3%',
+        x: 208,
+        y: 325,
+        labelPos: 'left',
+        isBarbosa: false,
+        years: { 1946: 0, 1947: 3, 1948: 0, 1949: 0, 1956: 0 },
+        breakdown: '1947 con 3',
+        note: 'Episodios ocurridos durante la contienda electoral de 1947 sobre la ruta ferroviaria previa a Barbosa, Casallas Sierra, 2025.'
+      },
+      {
+        id: 'barbosa',
+        name: 'Barbosa y Cite',
+        dept: 'Santander',
+        count: 1,
+        pct: '2.1%',
+        x: 254,
+        y: 218,
+        labelPos: 'top-right',
+        isBarbosa: true,
+        years: { 1946: 0, 1947: 0, 1948: 0, 1949: 1, 1956: 0 },
+        breakdown: '29 de marzo de 1949 con 1',
+        note: 'Único registro directo, asesinato de dos liberales en el corregimiento de Cite el 29 de marzo de 1949 en represalia por la muerte del conservador Pinzón Camacho, Casallas Sierra, 2025.'
+      },
+      {
+        id: 'guepsa',
+        name: 'Güepsa',
+        dept: 'Santander',
+        count: 1,
+        pct: '2.1%',
+        x: 294,
+        y: 108,
+        labelPos: 'right',
+        isBarbosa: false,
+        years: { 1946: 0, 1947: 0, 1948: 0, 1949: 1, 1956: 0 },
+        breakdown: '1949 con 1',
+        note: 'Registro en 1949 sobre la ribera norte del Río Suárez, poco antes de la imposición de la censura oficial en noviembre de ese año, Casallas Sierra, 2025.'
+      }
+    ];
+
+    const gambitaMarker = {
+      id: 'gambita',
+      name: 'Gámbita, contexto 1935',
+      dept: 'Santander, frontera con Barbosa',
+      x: 416,
+      y: 334,
+      note: 'Reporte de El Deber en marzo de 1935 sobre hostigamiento religioso y desplazamiento campesino en frontera con Barbosa y Moniquirá durante la República Liberal, Acevedo Tarazona, 2015.'
+    };
+
+    let selectedGeoId = 'barbosa';
+    let geoMode = 'dual';
+
+    function setGeoMode(mode) {
+      geoMode = mode;
+      document.getElementById('btn-geo-dual').classList.toggle('active', mode === 'dual');
+      document.getElementById('btn-geo-map').classList.toggle('active', mode === 'map');
+      document.getElementById('btn-geo-chart').classList.toggle('active', mode === 'chart');
+
+      const gridEl = document.getElementById('geo-balanced-grid');
+      const leftCol = document.getElementById('geo-left-col');
+      const rightCol = document.getElementById('geo-right-col');
+      const barsPanel = document.getElementById('geo-bars-panel');
+
+      if (mode === 'dual') {
+        gridEl.style.gridTemplateColumns = '1.08fr 0.92fr';
+        leftCol.style.display = 'flex';
+        rightCol.style.display = 'flex';
+        barsPanel.style.display = 'block';
+      } else if (mode === 'map') {
+        gridEl.style.gridTemplateColumns = '1.15fr 0.85fr';
+        leftCol.style.display = 'flex';
+        rightCol.style.display = 'flex';
+        barsPanel.style.display = 'none';
+      } else {
+        gridEl.style.gridTemplateColumns = '1fr';
+        leftCol.style.display = 'none';
+        rightCol.style.display = 'flex';
+        barsPanel.style.display = 'block';
+      }
+      notifyHeight();
+    }
+
+    function selectGeoMunicipality(id) {
+      selectedGeoId = id;
+      renderConflictSection();
+    }
+
+    function renderConflictSection() {
+      const pillsEl = document.getElementById('geo-pills');
+      pillsEl.innerHTML = '';
+      conflictMunicipalities.forEach(m => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `pill-btn ${m.isBarbosa ? 'barbosa-pill' : ''} ${selectedGeoId === m.id ? 'active' : ''}`;
+        btn.textContent = `${m.name}, ${m.count}`;
+        btn.onclick = () => selectGeoMunicipality(m.id);
+        pillsEl.appendChild(btn);
+      });
+
+      const gBtn = document.createElement('button');
+      gBtn.type = 'button';
+      gBtn.className = `pill-btn ${selectedGeoId === 'gambita' ? 'active' : ''}`;
+      gBtn.textContent = 'Gámbita, 1935';
+      gBtn.onclick = () => selectGeoMunicipality('gambita');
+      pillsEl.appendChild(gBtn);
+
+      // Mapa regional más alto y alargado verticalmente (viewBox="0 0 520 435")
+      const mapSvg = document.getElementById('conflict-map');
+      let svgHtml = `
+        <rect x="0" y="0" width="520" height="435" fill="#ecead9"/>
+        <path d="M 332 0 L 520 0 L 520 435 L 286 435 C 296 364, 318 310, 334 256 C 350 200, 330 118, 332 0 Z" fill="#e2dfd0"/>
+        <path d="M 332 0 C 330 118, 350 200, 334 256 C 318 310, 296 364, 286 435" fill="none" stroke="#8e8c7f" stroke-width="1.6" stroke-dasharray="5,4"/>
+
+        <text x="22" y="26" font-size="10" font-weight="bold" letter-spacing="1.6" fill="#75746c">DEPARTAMENTO DE SANTANDER</text>
+        <text x="22" y="40" font-size="9" fill="#75746c">Provincia de Vélez</text>
+        <text x="352" y="26" font-size="10" font-weight="bold" letter-spacing="1.6" fill="#75746c">DEPTO. DE BOYACÁ</text>
+        <text x="352" y="40" font-size="9" fill="#75746c">Provincia de Ricaurte</text>
+
+        <path d="M 188 435 C 206 374, 226 330, 244 272 C 260 216, 270 172, 292 108 C 304 70, 314 30, 324 0" fill="none" stroke="#9ab5b8" stroke-width="4.5" stroke-linecap="round"/>
+        <text x="309" y="64" font-size="9.5" font-style="italic" font-weight="bold" fill="#4f6d70">Río Suárez</text>
+
+        <path d="M 152 435 C 176 390, 198 355, 218 320 C 236 290, 246 256, 254 218" fill="none" stroke="#2c5559" stroke-width="3.2"/>
+        <path d="M 152 435 C 176 390, 198 355, 218 320 C 236 290, 246 256, 254 218" fill="none" stroke="#f3f3ec" stroke-width="1.3" stroke-dasharray="4,4"/>
+        <text x="34" y="396" font-size="9" font-weight="bold" fill="#2c5559">Ferrocarril del Norte</text>
+        <text x="34" y="409" font-size="8.5" fill="#4e4e48">Terminal Barbosa, 1935</text>
+
+        <path d="M 152 120 Q 204 170 254 218 Q 318 238 382 256" fill="none" stroke="#9e9b8e" stroke-width="1.4" stroke-dasharray="3,3"/>
+      `;
+
+      const isG = selectedGeoId === 'gambita';
+      svgHtml += `
+        <g class="svg-click" onclick="selectGeoMunicipality('gambita')">
+          ${isG ? `<circle cx="${gambitaMarker.x}" cy="${gambitaMarker.y}" r="13" fill="none" stroke="#1e1e1c" stroke-width="2"/>` : ''}
+          <circle cx="${gambitaMarker.x}" cy="${gambitaMarker.y}" r="7.5" fill="#2c5559" stroke="#faf9f4" stroke-width="1.8"/>
+          <text x="${gambitaMarker.x + 12}" y="${gambitaMarker.y - 2}" font-size="10" font-weight="bold" fill="#2c5559">Gámbita</text>
+          <text x="${gambitaMarker.x + 12}" y="${gambitaMarker.y + 10}" font-size="8.5" fill="#4e4e48">El Deber, 1935</text>
+        </g>
+      `;
+
+      const sortedMunis = [...conflictMunicipalities].sort((a, b) => b.count - a.count);
+      sortedMunis.forEach(m => {
+        const isSel = selectedGeoId === m.id;
+        const r = Math.max(9.5, Math.round(Math.sqrt(m.count) * 4.8));
+        const fill = m.isBarbosa ? '#9a6b26' : '#8c3b2b';
+
+        let lx = m.x;
+        let ly = m.y;
+        let anchor = 'start';
+        if (m.labelPos === 'left') {
+          lx = m.x - r - 7;
+          ly = m.y - 2;
+          anchor = 'end';
+        } else if (m.labelPos === 'right') {
+          lx = m.x + r + 7;
+          ly = m.y - 2;
+          anchor = 'start';
+        } else if (m.labelPos === 'top-right') {
+          lx = m.x + r + 8;
+          ly = m.y - 6;
+          anchor = 'start';
+        }
+
+        svgHtml += `
+          <g class="svg-click" onclick="selectGeoMunicipality('${m.id}')">
+            ${isSel ? `<circle cx="${m.x}" cy="${m.y}" r="${r + 4.5}" fill="none" stroke="#1e1e1c" stroke-width="2.1"/>` : ''}
+            <circle cx="${m.x}" cy="${m.y}" r="${r}" fill="${fill}" fill-opacity="${isSel ? '0.96' : '0.86'}" stroke="#faf9f4" stroke-width="1.8"/>
+            <text x="${m.x}" y="${m.y + 4}" text-anchor="middle" font-size="${m.count >= 10 ? '11' : '9.5'}" font-weight="bold" fill="#ffffff">${m.count}</text>
+            <text x="${lx}" y="${ly}" text-anchor="${anchor}" font-size="${m.isBarbosa || isSel ? '11' : '10'}" font-weight="${m.isBarbosa || isSel ? 'bold' : 'normal'}" fill="${isSel ? '#1e1e1c' : m.isBarbosa ? '#9a6b26' : '#1e1e1c'}">${m.name}</text>
+            <text x="${lx}" y="${ly + 11}" text-anchor="${anchor}" font-size="8.5" fill="#4e4e48">${m.pct}</text>
+          </g>
+        `;
+      });
+
+      svgHtml += `
+        <g transform="translate(264, 381)">
+          <rect x="0" y="0" width="246" height="42" fill="#faf9f4" stroke="#8e8c7f" stroke-width="1"/>
+          <circle cx="13" cy="14" r="4.8" fill="#8c3b2b"/>
+          <text x="24" y="17" font-size="9" fill="#1e1e1c">Vanguardia Liberal, 1946 a 1958, n 48</text>
+          <circle cx="13" cy="29" r="4.8" fill="#9a6b26"/>
+          <text x="24" y="32" font-size="9" fill="#1e1e1c">Nodo Barbosa y Cite, subregistro</text>
+        </g>
+      `;
+      mapSvg.innerHTML = svgHtml;
+
+      const detailEl = document.getElementById('geo-detail-card');
+      if (selectedGeoId === 'gambita') {
+        detailEl.innerHTML = `
+          <span class="plate-badge">Contexto Fronterizo, 1935</span>
+          <h4 style="margin:0 0 0.35rem 0; font-size:1.02rem; color:var(--accent);">${gambitaMarker.name}</h4>
+          <p style="font-family:var(--ui); font-size:0.7rem; color:var(--muted); margin-bottom:0.5rem;">${gambitaMarker.dept}</p>
+          <p style="font-size:0.82rem; margin:0;">${gambitaMarker.note}</p>
+        `;
+      } else {
+        const m = conflictMunicipalities.find(item => item.id === selectedGeoId) || conflictMunicipalities[5];
+        const yrs = [1946, 1947, 1948, 1949, 1956];
+        const miniBars = yrs.map(yr => {
+          const val = m.years[yr] || 0;
+          const hPct = val > 0 ? Math.max(18, Math.round((val / 15) * 100)) : 4;
+          const col = val > 0 ? (m.isBarbosa ? 'var(--ochre)' : 'var(--terracotta)') : 'var(--line)';
+          return `
+            <div class="mini-bar-col">
+              <strong>${val}</strong>
+              <div class="mini-bar-track">
+                <div class="mini-bar-fill" style="height:${hPct}%; background:${col};"></div>
+              </div>
+              <span>${yr}</span>
+            </div>
+          `;
+        }).join('');
+
+        detailEl.innerHTML = `
+          <span class="plate-badge" style="color:${m.isBarbosa ? 'var(--ochre)' : 'var(--terracotta)'};">
+            ${m.isBarbosa ? 'Nodo Ferroviario, Subregistro en Prensa' : 'Municipio del Corredor'}
+          </span>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:0.5rem;">
+            <h4 style="margin:0; font-size:1.05rem; color:var(--ink);">${m.name}</h4>
+            <span style="font-family:var(--ui); font-size:0.78rem; font-weight:700; color:${m.isBarbosa ? 'var(--ochre)' : 'var(--terracotta)'};">${m.count} reg., ${m.pct}</span>
+          </div>
+          <p style="font-family:var(--ui); font-size:0.69rem; color:var(--muted); margin:0.2rem 0 0 0;">
+            Depto. de ${m.dept}, años ${m.breakdown}
+          </p>
+          <div class="mini-bars-row">${miniBars}</div>
+          <p style="font-size:0.81rem; margin:0;">${m.note}</p>
+        `;
+      }
+
+      // Barras horizontales completamente contenidas dentro de viewBox="0 0 460 232"
+      const barsSvg = document.getElementById('svg-conflict-bars');
+      const marginL = 122;
+      const maxBarW = 228;
+      let barsHtml = '';
+
+      conflictMunicipalities.forEach((m, idx) => {
+        const y = 6 + idx * 32;
+        const isSel = selectedGeoId === m.id;
+        const bw = Math.max(9, Math.round((m.count / 27) * maxBarW));
+        const fill = isSel ? '#2c5559' : m.isBarbosa ? '#9a6b26' : '#8c3b2b';
+
+        barsHtml += `
+          <g class="svg-click" onclick="selectGeoMunicipality('${m.id}')">
+            ${isSel ? `<rect x="2" y="${y - 4}" width="456" height="25" fill="#2c5559" fill-opacity="0.1"/>` : ''}
+            <text x="${marginL - 8}" y="${y + 13}" text-anchor="end" font-size="10.5" font-weight="${isSel || m.isBarbosa ? 'bold' : 'normal'}" fill="${isSel ? '#2c5559' : m.isBarbosa ? '#9a6b26' : '#1e1e1c'}">${m.name}</text>
+            <rect x="${marginL}" y="${y}" width="${maxBarW}" height="17" fill="#eae9df" stroke="#c9c7ba" stroke-width="0.8"/>
+            <rect x="${marginL}" y="${y}" width="${bw}" height="17" fill="${fill}"/>
+            <text x="${marginL + bw + 7}" y="${y + 13}" font-size="10" font-weight="bold" fill="${fill}">${m.count} reg., ${m.pct}</text>
+          </g>
+        `;
+      });
+      barsSvg.innerHTML = barsHtml;
+    }
+
+    // =========================================================================
+    // 6. BLOQUE 2: SERIE TEMPORAL PRENSA Y CENSURA OFICIAL, 1946 A 1958
+    // =========================================================================
+    const pressTimelineData = [
+      { year: 1946, total: 16, barbosa: 0, neighbors: 16, detail: 'Vélez 8, Guavatá 7, Jesús María 1', note: '1946, 16 registros, agresiones físicas, irregularidades electorales y sermones parroquiales al iniciarse el cambio de gobierno, Casallas Sierra, 2025.' },
+      { year: 1947, total: 24, barbosa: 0, neighbors: 24, detail: 'Vélez 15, Moniquirá 4, Puente Nacional 3, Jesús María 2', note: '1947, 24 registros, equivalente al 50% del total del periodo, máxima intensidad informativa durante las jornadas electorales, Casallas Sierra, 2025.' },
+      { year: 1948, total: 4, barbosa: 0, neighbors: 4, detail: 'Vélez 3, Jesús María 1', note: '1948, 4 registros, reducción abrupta tras los sucesos del 9 de abril y las primeras restricciones de prensa, Casallas Sierra, 2025.' },
+      { year: 1949, total: 3, barbosa: 1, neighbors: 2, detail: 'Barbosa y Cite 1, Güepsa 1, Moniquirá 1', note: '1949, 3 registros, incluye el único reporte directo en Barbosa y Cite el 29 de marzo. Desde noviembre rige la censura oficial, Casallas Sierra, 2025.' },
+      { year: 1950, total: 0, barbosa: 0, neighbors: 0, detail: '', note: '1950, 0 registros, silencio informativo por censura previa vigente en Vanguardia Liberal, Casallas Sierra, 2025.' },
+      { year: 1951, total: 0, barbosa: 0, neighbors: 0, detail: '', note: '1951, 0 registros, silencio informativo por censura oficial, Casallas Sierra, 2025.' },
+      { year: 1952, total: 0, barbosa: 0, neighbors: 0, detail: '', note: '1952, 0 registros, silencio informativo por censura oficial, Casallas Sierra, 2025.' },
+      { year: 1953, total: 0, barbosa: 0, neighbors: 0, detail: '', note: '1953, 0 registros, mantenimiento de la censura de prensa tras el golpe militar de junio de 1953, Casallas Sierra, 2025.' },
+      { year: 1954, total: 0, barbosa: 0, neighbors: 0, detail: '', note: '1954, 0 registros, sin ejemplares disponibles en la colección consultada de la Biblioteca Nacional, Casallas Sierra, 2025.' },
+      { year: 1955, total: 0, barbosa: 0, neighbors: 0, detail: '', note: '1955, 0 registros, silencio informativo bajo el régimen militar de Gustavo Rojas Pinilla, Casallas Sierra, 2025.' },
+      { year: 1956, total: 1, barbosa: 0, neighbors: 1, detail: 'Vélez 1', note: '1956, 1 registro en Vélez, único reporte de la década, referido a una condena presidencial, Casallas Sierra, 2025.' },
+      { year: 1957, total: 0, barbosa: 0, neighbors: 0, detail: '', note: '1957, 0 registros, únicamente se conserva el segundo trimestre disponible en Biblioteca Nacional, Casallas Sierra, 2025.' },
+      { year: 1958, total: 0, barbosa: 0, neighbors: 0, detail: '', note: '1958, 0 registros, sin ejemplares disponibles en el acervo consultado, Casallas Sierra, 2025.' }
+    ];
+
+    let pressMode = 'total';
+    let selectedPressYear = 1949;
+
+    function setPressMode(mode) {
+      pressMode = mode;
+      document.getElementById('btn-press-total').classList.toggle('active', mode === 'total');
+      document.getElementById('btn-press-stacked').classList.toggle('active', mode === 'stacked');
+      renderPressCensorshipChart();
+    }
+
+    function renderPressCensorshipChart() {
+      const svg = document.getElementById('svg-press-censorship');
+      const leftPad = 46;
+      const topPad = 36;
+      const chartH = 195;
+      const colW = 54;
+      const maxVal = 25;
+
+      let out = '';
+
+      const cStart = leftPad + 4 * colW - 3;
+      const cWidth = 6 * colW;
+      out += `<rect x="${cStart}" y="${topPad}" width="${cWidth}" height="${chartH}" fill="#9a6b26" fill-opacity="0.12" stroke="#9a6b26" stroke-dasharray="4,3"/>`;
+      out += `<text x="${cStart + cWidth / 2}" y="${topPad + 20}" text-anchor="middle" font-size="10" font-weight="bold" fill="#9a6b26">Silencio por Censura Oficial, 1950 a 1955</text>`;
+      out += `<text x="${cStart + cWidth / 2}" y="${topPad + 34}" text-anchor="middle" font-size="9" fill="#75746c">0 registros, sin ejemplares en 1954</text>`;
+
+      [0, 5, 10, 15, 20, 25].forEach(tick => {
+        const y = topPad + chartH - (tick / maxVal) * chartH;
+        out += `<line x1="${leftPad - 5}" y1="${y}" x2="${leftPad + 13 * colW}" y2="${y}" stroke="${tick === 0 ? '#8e8c7f' : '#d6d4c7'}" stroke-dasharray="${tick === 0 ? '' : '3,3'}"/>`;
+        out += `<text x="${leftPad - 10}" y="${y + 3.5}" text-anchor="end" font-size="9.5" fill="#75746c">${tick}</text>`;
+      });
+
+      if (pressMode === 'stacked') {
+        out += `<rect x="${leftPad}" y="8" width="10" height="10" fill="#9a6b26"/>`;
+        out += `<text x="${leftPad + 15}" y="17" font-size="9.5" font-weight="bold" fill="#9a6b26">Barbosa y Cite, 1 registro en 1949</text>`;
+        out += `<rect x="${leftPad + 235}" y="8" width="10" height="10" fill="#8c3b2b"/>`;
+        out += `<text x="${leftPad + 250}" y="17" font-size="9.5" fill="#4e4e48">Municipios vecinos, 47 registros</text>`;
+      }
+
+      pressTimelineData.forEach((d, idx) => {
+        const cx = leftPad + idx * colW + colW / 2;
+        const bw = 30;
+        const isSel = selectedPressYear === d.year;
+
+        out += `<g class="svg-click" onmouseenter="selectedPressYear=${d.year}; updatePressReadout();" onclick="selectedPressYear=${d.year}; renderPressCensorshipChart();">`;
+        out += `<rect x="${cx - colW / 2}" y="${topPad}" width="${colW}" height="${chartH + 24}" fill="${isSel ? '#2c5559' : 'transparent'}" fill-opacity="${isSel ? '0.08' : '0'}"/>`;
+
+        if (d.total > 0) {
+          if (pressMode === 'total') {
+            const bh = (d.total / maxVal) * chartH;
+            const by = topPad + chartH - bh;
+            out += `<rect x="${cx - bw / 2}" y="${by}" width="${bw}" height="${bh}" fill="${d.year === 1949 ? '#9a6b26' : '#8c3b2b'}"/>`;
+          } else {
+            const hNeighbors = (d.neighbors / maxVal) * chartH;
+            const yNeighbors = topPad + chartH - hNeighbors;
+            if (d.neighbors > 0) {
+              out += `<rect x="${cx - bw / 2}" y="${yNeighbors}" width="${bw}" height="${hNeighbors}" fill="#8c3b2b"/>`;
+            }
+            if (d.barbosa > 0) {
+              const hBarbosa = (d.barbosa / maxVal) * chartH;
+              const yBarbosa = yNeighbors - hBarbosa;
+              out += `<rect x="${cx - bw / 2}" y="${yBarbosa}" width="${bw}" height="${hBarbosa}" fill="#9a6b26" stroke="#faf9f4" stroke-width="0.9"/>`;
+            }
+          }
+          const topY = topPad + chartH - (d.total / maxVal) * chartH - 5;
+          out += `<text x="${cx}" y="${topY}" text-anchor="middle" font-size="10.5" font-weight="bold" fill="${d.year === 1949 ? '#9a6b26' : '#8c3b2b'}">${d.total}</text>`;
+        } else {
+          out += `<text x="${cx}" y="${topPad + chartH - 5}" text-anchor="middle" font-size="9.5" fill="#9a6b26">0</text>`;
+        }
+
+        out += `<text x="${cx}" y="${topPad + chartH + 16}" text-anchor="middle" font-size="10" font-weight="${isSel ? 'bold' : 'normal'}" fill="${isSel ? '#2c5559' : '#4e4e48'}">${d.year}</text>`;
+        out += `</g>`;
+      });
+
+      out += `<text x="${leftPad + 11.5 * colW}" y="${topPad + chartH + 34}" text-anchor="middle" font-size="9" fill="#75746c">1957 segundo trimestre, 1958 sin ejemplares</text>`;
+
+      svg.innerHTML = out;
+      updatePressReadout();
+    }
+
+    function updatePressReadout() {
+      const item = pressTimelineData.find(d => d.year === selectedPressYear) || pressTimelineData[3];
+      document.getElementById('readout-press').textContent = item.detail
+        ? `${item.note} Desglose municipal, ${item.detail}.`
+        : item.note;
+    }
+
+    // =========================================================================
+    // 7. BLOQUE 3: DOS CICLOS JUDICIALES, 1930 A 1948, Y SUBGRÁFICAS B1 Y B2
+    // =========================================================================
+    const judicialCyclesData = [
+      { year: 1930, cases: 4, wave: '1.a oleada, 1930 a 1934' },
+      { year: 1931, cases: 27, wave: '1.a oleada, 1930 a 1934' },
+      { year: 1932, cases: 35, wave: '1.a oleada, pico máximo' },
+      { year: 1933, cases: 18, wave: '1.a oleada, 1930 a 1934' },
+      { year: 1934, cases: 14, wave: '1.a oleada, 1930 a 1934' },
+      { year: 1935, cases: 4, wave: 'Fase de menor registro, 1935 a 1945' },
+      { year: 1936, cases: 3, wave: 'Fase de menor registro, 1935 a 1945' },
+      { year: 1937, cases: 2, wave: 'Fase de menor registro, 1935 a 1945' },
+      { year: 1938, cases: 2, wave: 'Fase de menor registro, 1935 a 1945' },
+      { year: 1939, cases: 3, wave: 'Fase de menor registro, 1935 a 1945' },
+      { year: 1940, cases: 2, wave: 'Fase de menor registro, 1935 a 1945' },
+      { year: 1941, cases: 2, wave: 'Fase de menor registro, 1935 a 1945' },
+      { year: 1942, cases: 2, wave: 'Fase de menor registro, 1935 a 1945' },
+      { year: 1943, cases: 1, wave: 'Fase de menor registro, 1935 a 1945' },
+      { year: 1944, cases: 1, wave: 'Fase de menor registro, 1935 a 1945' },
+      { year: 1945, cases: 3, wave: 'Fase de menor registro, 1935 a 1945' },
+      { year: 1946, cases: 1, wave: '2.a oleada, 1946 a 1948' },
+      { year: 1947, cases: 8, wave: '2.a oleada, 1946 a 1948' },
+      { year: 1948, cases: 18, wave: '2.a oleada, 1946 a 1948' }
+    ];
+
+    const judicialProvinces = [
+      { name: 'García Rovira', pct: 51, cases: 78, highlight: false },
+      { name: 'Soto', pct: 45, cases: 67, highlight: false },
+      { name: 'Mares', pct: 2, cases: 3, highlight: false },
+      { name: 'Comunera', pct: 1, cases: 1, highlight: false },
+      { name: 'Provincia de Vélez, incluye Barbosa', pct: 1, cases: 1, highlight: true }
+    ];
+
+    const judicialOutcomes = [
+      { label: 'Sobreseimientos', count: 68, isCondena: false },
+      { label: 'Condenas', count: 35, isCondena: true },
+      { label: 'Absoluciones', count: 33, isCondena: false },
+      { label: 'Prescripciones', count: 22, isCondena: false },
+      { label: 'Sin sentencia', count: 10, isCondena: false },
+      { label: 'Archivos', count: 7, isCondena: false },
+      { label: 'Amnistías', count: 4, isCondena: false }
+    ];
+
+    let selectedJudicialYear = 1932;
+
+    function renderJudicialSection() {
+      const svg = document.getElementById('svg-judicial-cycles');
+      const leftPad = 46;
+      const rightPad = 24;
+      const topPad = 48;
+      const chartH = 192;
+      const usableW = 820 - leftPad - rightPad;
+      const stepX = usableW / (judicialCyclesData.length - 1);
+      const maxCases = 36;
+
+      let out = '';
+
+      // Etiquetas de oleadas en franja superior dedicada (y=14) arriba de la curva y puntos máximos
+      const w1W = 4 * stepX;
+      out += `<rect x="${leftPad}" y="${topPad}" width="${w1W}" height="${chartH}" fill="#2c5559" fill-opacity="0.09"/>`;
+      out += `<line x1="${leftPad}" y1="22" x2="${leftPad + w1W}" y2="22" stroke="#2c5559" stroke-width="1.5"/>`;
+      out += `<text x="${leftPad + w1W / 2}" y="14" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#2c5559">1.a oleada, 1930 a 1934</text>`;
+
+      const w2X = leftPad + 16 * stepX;
+      const w2W = 2 * stepX;
+      out += `<rect x="${w2X}" y="${topPad}" width="${w2W}" height="${chartH}" fill="#8c3b2b" fill-opacity="0.1"/>`;
+      out += `<line x1="${w2X}" y1="22" x2="${w2X + w2W}" y2="22" stroke="#8c3b2b" stroke-width="1.5"/>`;
+      out += `<text x="${w2X + w2W / 2}" y="14" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#8c3b2b">2.a oleada, 1946 a 1948</text>`;
+
+      [0, 10, 20, 30, 35].forEach(tick => {
+        const y = topPad + chartH - (tick / maxCases) * chartH;
+        out += `<line x1="${leftPad}" y1="${y}" x2="${820 - rightPad}" y2="${y}" stroke="${tick === 0 ? '#8e8c7f' : '#d6d4c7'}" stroke-dasharray="${tick === 0 ? '' : '3,3'}"/>`;
+        out += `<text x="${leftPad - 8}" y="${y + 3.5}" text-anchor="end" font-size="9.5" fill="#75746c">${tick}</text>`;
+      });
+
+      const pts = judicialCyclesData.map((d, idx) => ({
+        x: leftPad + idx * stepX,
+        y: topPad + chartH - (d.cases / maxCases) * chartH,
+        ...d
+      }));
+
+      const areaD = [
+        `M ${pts[0].x} ${topPad + chartH}`,
+        ...pts.map(p => `L ${p.x} ${p.y}`),
+        `L ${pts[pts.length - 1].x} ${topPad + chartH}`,
+        'Z'
+      ].join(' ');
+      out += `<path d="${areaD}" fill="#2c5559" fill-opacity="0.14"/>`;
+
+      const lineD = pts.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ');
+      out += `<path d="${lineD}" fill="none" stroke="#1e1e1c" stroke-width="2.2"/>`;
+
+      pts.forEach(p => {
+        const isSel = selectedJudicialYear === p.year;
+        const col = p.year >= 1946 ? '#8c3b2b' : '#2c5559';
+        const noteText = `${p.year}, ${p.cases} ${p.cases === 1 ? 'expediente judicial' : 'expedientes judiciales'} en Santander, ${p.wave}, Pizza Uribe, 2018.`;
+
+        out += `<g class="svg-click" onmouseenter="selectedJudicialYear=${p.year}; document.getElementById('readout-judicial').textContent='${noteText}'; document.getElementById('judicial-year-badge').textContent='Año ${p.year}, ${p.cases} expedientes';" onclick="selectedJudicialYear=${p.year}; renderJudicialSection();">`;
+        out += `<circle cx="${p.x}" cy="${p.y}" r="${isSel ? '6.5' : '4.2'}" fill="${col}" stroke="#faf9f4" stroke-width="1.6"/>`;
+        if (p.cases >= 8 || isSel) {
+          out += `<text x="${p.x}" y="${p.y - 8}" text-anchor="middle" font-size="10" font-weight="bold" fill="${col}">${p.cases}</text>`;
+        }
+        out += `<text x="${p.x}" y="${topPad + chartH + 17}" text-anchor="middle" font-size="9.5" font-weight="${isSel ? 'bold' : 'normal'}" fill="${isSel ? '#1e1e1c' : '#4e4e48'}">${p.year}</text>`;
+        out += `</g>`;
+      });
+
+      svg.innerHTML = out;
+
+      const curPt = pts.find(p => p.year === selectedJudicialYear) || pts[2];
+      document.getElementById('judicial-year-badge').textContent = `Año ${curPt.year}, ${curPt.cases} expedientes`;
+      document.getElementById('readout-judicial').textContent = `${curPt.year}, ${curPt.cases} ${curPt.cases === 1 ? 'expediente judicial' : 'expedientes judiciales'} en Santander, ${curPt.wave}, Pizza Uribe, 2018.`;
+
+      // Subgráfica B1
+      const provEl = document.getElementById('judicial-provinces-container');
+      provEl.innerHTML = judicialProvinces.map(pr => `
+        <div style="margin-bottom:0.65rem; font-family:var(--ui); font-size:0.73rem;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.25rem; font-weight:${pr.highlight ? '700' : '500'}; color:${pr.highlight ? 'var(--ochre)' : 'var(--ink)'};">
+            <span>${pr.name}</span>
+            <span>${pr.pct}%, ${pr.cases} exp.</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:${Math.max(3, pr.pct)}%; background:${pr.highlight ? 'var(--ochre)' : 'var(--accent)'};"></div>
+          </div>
+        </div>
+      `).join('');
+
+      // Subgráfica B2
+      const impEl = document.getElementById('impunity-breakdown-grid');
+      impEl.innerHTML = judicialOutcomes.map(it => `
+        <div class="imp-cell ${it.isCondena ? 'condena-cell' : ''}">
+          <span class="imp-num">${it.count}</span>
+          <span class="imp-lbl">${it.label}</span>
+        </div>
+      `).join('');
+    }
+
+    // =========================================================================
+    // 8. BLOQUE 4: TIPOLOGÍA PENAL Y DETONANTES JUDICIALES, 1930 A 1948
+    // =========================================================================
+    const penalCrimes = [
+      { id: 'homicidio', label: 'Homicidio', pct: 92, extra: '138 exp., 154 víctimas', color: '#8c3b2b', text: 'Homicidio con 92%, 138 de los 150 expedientes revisados se instruyeron por muertes violentas, con un saldo de 154 víctimas mortales registradas en los sumarios, Pizza Uribe, 2018.' },
+      { id: 'robo', label: 'Robo', pct: 4, extra: '6 expedientes', color: '#2c5559', text: 'Robo con 4%, 6 expedientes abiertos por apropiación de ganado, mercancías o bienes rurales en el curso de incursiones partidistas, Pizza Uribe, 2018.' },
+      { id: 'asonada', label: 'Asonada', pct: 2, extra: '3 expedientes', color: '#9a6b26', text: 'Asonada con 2%, 3 expedientes por alteraciones colectivas del orden público contra autoridades locales o establecimientos durante jornadas electorales, Pizza Uribe, 2018.' },
+      { id: 'carnal', label: 'Violencia carnal', pct: 1, extra: '1 expediente', color: '#5c8084', text: 'Violencia carnal con 1%, 1 expediente judicial documentado en el marco de hostigamientos en zonas rurales, Pizza Uribe, 2018.' },
+      { id: 'secuestro', label: 'Secuestro', pct: 1, extra: '1 expediente', color: '#75746c', text: 'Secuestro con 1%, 1 expediente por retención forzada de opositores políticos consignado en el fondo judicial de Santander, Pizza Uribe, 2018.' }
+    ];
+
+    const penalTriggers = [
+      { id: 'embriaguez', label: 'Embriaguez', pct: 34, text: 'Embriaguez con 34%, en más de una tercera parte de los expedientes, el consumo de bebidas alcohólicas en días de mercado o elecciones actuó como detonante inmediato de las riñas partidistas, Pizza Uribe, 2018.' },
+      { id: 'bandolerismo', label: 'Asalto en banda o bandolerismo', pct: 29, text: 'Asalto en banda o bandolerismo con 29%, incursiones de cuadrillas armadas sobre caminos reales y veredas contra familias identificadas con el partido contrario, Pizza Uribe, 2018.' },
+      { id: 'enemistades', label: 'Enemistades previas', pct: 14, text: 'Enemistades previas con 14%, disputas familiares, linderos de propiedad o conflictos personales que se canalizaron a través de las identidades liberal y conservadora, Pizza Uribe, 2018.' },
+      { id: 'otros', label: 'Otros motivos o sin especificar', pct: 12, text: 'Otros motivos o sin especificar con 12%, sumarios incompletos o declaraciones en las que los testigos omitieron precisar el móvil por temor a represalias, Pizza Uribe, 2018.' },
+      { id: 'autoridad', label: 'Conflicto con la autoridad', pct: 5, text: 'Conflicto con la autoridad con 5%, enfrentamientos directos entre pobladores y agentes de policía señalados de parcialidad política, Pizza Uribe, 2018.' },
+      { id: 'parroco', label: 'Incitación del párroco', pct: 3, text: 'Incitación del párroco con 3%, procesos en los que los declarantes atribuyeron el origen de la agresión a prédicas emitidas desde el púlpito parroquial, Pizza Uribe, 2018.' },
+      { id: 'galleras', label: 'Riñas en galleras', pct: 3, text: 'Riñas en galleras con 3%, altercados surgidos en espacios de sociabilidad rural que escalaron hacia enfrentamientos armados entre bandos, Pizza Uribe, 2018.' }
+    ];
+
+    let activeTypologyItem = penalCrimes[0];
+
+    function renderTypologySection() {
+      const crimesEl = document.getElementById('crimes-bars-container');
+      crimesEl.innerHTML = '';
+      penalCrimes.forEach(c => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `bar-row-btn ${activeTypologyItem.id === c.id ? 'active' : ''}`;
+        btn.innerHTML = `
+          <div class="bar-row-head">
+            <strong>${c.label}</strong>
+            <span style="color:${c.color}; font-weight:700;">${c.pct}%, ${c.extra}</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:${Math.max(3, c.pct)}%; background:${c.color};"></div>
+          </div>
+        `;
+        btn.onclick = () => {
+          activeTypologyItem = c;
+          renderTypologySection();
+        };
+        crimesEl.appendChild(btn);
+      });
+
+      const triggersEl = document.getElementById('triggers-bars-container');
+      triggersEl.innerHTML = '';
+      penalTriggers.forEach(t => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `bar-row-btn ${activeTypologyItem.id === t.id ? 'active' : ''}`;
+        btn.innerHTML = `
+          <div class="bar-row-head">
+            <strong>${t.label}</strong>
+            <span style="color:var(--accent); font-weight:700;">${t.pct}%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:${Math.max(4, t.pct * 2.5)}%; background:var(--accent);"></div>
+          </div>
+        `;
+        btn.onclick = () => {
+          activeTypologyItem = t;
+          renderTypologySection();
+        };
+        triggersEl.appendChild(btn);
+      });
+
+      document.getElementById('readout-typology').textContent = activeTypologyItem.text;
+    }
+
+    // =========================================================================
+    // 9. FILTRO DE TABLA DE DATOS Y AUTOAJUSTE DE ALTURA
+    // =========================================================================
+    function filterTable() {
+      const q = document.getElementById('table-search').value.toLowerCase();
+      document.querySelectorAll('#data-tbody tr').forEach(tr => {
+        tr.style.display = tr.innerText.toLowerCase().includes(q) ? '' : 'none';
+      });
+      notifyHeight();
+    }
+
+    function notifyHeight() {
+      const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+      window.parent.postMessage({ type: 'resize', height: h }, '*');
+    }
+
+    function renderAll() {
+      renderGdpChart();
+      renderRailChart();
+      renderPopChart();
+      renderConflictSection();
+      renderPressCensorshipChart();
+      renderJudicialSection();
+      renderTypologySection();
+      notifyHeight();
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      selectNode(5);
+      renderAll();
+    });
+    window.addEventListener('resize', renderAll);
+  </script>
+</body>
+</html>
